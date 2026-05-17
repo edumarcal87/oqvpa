@@ -27,6 +27,9 @@ jobs:
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
           TINA_BRANCH: main
 
+      - name: Verificar pasta dist
+        run: ls -la dist/ && ls -la dist/admin/ || echo "pasta admin nao encontrada"
+
       - name: Publicar no GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
