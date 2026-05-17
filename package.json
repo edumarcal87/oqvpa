@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://SEU_USUARIO.github.io/oqvpa",
+  "homepage": "https://edumarcal87.github.io/oqvpa",
   "scripts": {
     "dev": "tinacms dev -c \"vite\"",
     "build": "tinacms build && vite build",
