@@ -34,12 +34,11 @@ jobs:
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
           TINA_BRANCH: main
 
-      - name: Copiar admin para dist
+      - name: Copiar admin e remover gitignore interno
         run: |
-          echo "=== public/admin ==="
-          ls -la public/admin/ || echo "NAO EXISTE"
           cp -r public/admin/. dist/admin/
-          echo "=== dist/admin apos copia ==="
+          rm -f dist/admin/.gitignore
+          echo "=== dist/admin final ==="
           ls -la dist/admin/
 
       - name: Publicar no GitHub Pages
