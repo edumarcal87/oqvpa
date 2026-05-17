@@ -7,7 +7,7 @@ export default defineConfig({
 
   build: {
     outputFolder: "admin",
-    publicFolder: "public",
+    publicFolder: "dist",
   },
 
   media: {
