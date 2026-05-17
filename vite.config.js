@@ -6,24 +6,24 @@ function copyAssetsPlugin() {
   return {
     name: 'copy-assets',
     closeBundle() {
-      // Copia pasta content/
+      // Copia content/
       try {
         cpSync('content', 'dist/content', { recursive: true })
-        console.log('✅ content/ copiado para dist/content/')
+        console.log('✅ content/ copiado')
       } catch (e) {
-        console.error('Erro ao copiar content:', e)
+        console.error('Erro content:', e)
       }
 
-      // Copia pasta public/admin/
+      // Copia admin/ da raiz (commitado no repo)
       try {
-        if (existsSync('public/admin')) {
-          cpSync('public/admin', 'dist/admin', { recursive: true })
-          console.log('✅ public/admin/ copiado para dist/admin/')
+        if (existsSync('admin')) {
+          cpSync('admin', 'dist/admin', { recursive: true })
+          console.log('✅ admin/ copiado')
         } else {
-          console.warn('⚠️ public/admin/ não encontrado')
+          console.warn('⚠️ pasta admin/ não encontrada na raiz')
         }
       } catch (e) {
-        console.error('Erro ao copiar admin:', e)
+        console.error('Erro admin:', e)
       }
     }
   }

@@ -28,11 +28,14 @@ jobs:
           TINA_BRANCH: main
 
       - name: Copiar admin para dist
-        run: cp -r dist/admin dist/admin_backup && cp -r dist/admin dist/admin || cp -r ./dist/admin ./dist/admin
+        run: cp -r dist/admin ./admin_temp && cp -r ./admin_temp dist/admin
         continue-on-error: true
 
-      - name: Verificar dist
-        run: ls -la dist/ && ls -la dist/admin/ || echo "admin ausente"
+      - name: Copiar admin do repositório para dist
+        run: |
+          mkdir -p dist/admin
+          cp -r dist/admin/* dist/admin/ 2>/dev/null || true
+          ls -la dist/
 
       - name: Publicar no GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
