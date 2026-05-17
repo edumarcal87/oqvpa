@@ -1,41 +1,35 @@
+import { useContent } from '../hooks/useContent'
+
 export default function Sobre() {
+  const { data, loading } = useContent('sobre')
+  if (loading || !data) return null
+
   return (
     <section className="sobre" id="sobre">
       <div className="sobre-text">
         <span className="stag">Bernardo de Lacerda</span>
-        <h2 className="stitle">Astrônomo, artista e jovem explorador</h2>
-        <p>
-          Bernardo de Lacerda é um jovem cientista apaixonado por astronomia e pela busca
-          de respostas sobre o universo. Com projetos reconhecidos nacional e internacionalmente,
-          ele combina rigor científico com uma visão criativa única.
-        </p>
-        <p>
-          Fundador do projeto "O Que Vem Por Aí", Bernardo compartilha descobertas astronômicas,
-          participa de olimpíadas científicas e transforma a ciência em algo acessível e
-          emocionante para crianças e jovens de todo o Brasil.
-        </p>
-        <p>
-          Seu trabalho une astronomia analógica, produção audiovisual e educação científica,
-          rendendo prêmios, certificações e reconhecimento internacional.
-        </p>
+        <h2 className="stitle">{data.titulo}</h2>
+        <p>{data.paragrafo1}</p>
+        <p>{data.paragrafo2}</p>
+        <p>{data.paragrafo3}</p>
       </div>
 
       <div className="stats-grid">
         <div className="stat">
-          <span className="stat-n">10+</span>
-          <span className="stat-l">Prêmios conquistados</span>
+          <span className="stat-n">{data.stat1Numero}</span>
+          <span className="stat-l">{data.stat1Label}</span>
         </div>
         <div className="stat">
-          <span className="stat-n">5+</span>
-          <span className="stat-l">Projetos científicos</span>
+          <span className="stat-n">{data.stat2Numero}</span>
+          <span className="stat-l">{data.stat2Label}</span>
         </div>
         <div className="stat">
-          <span className="stat-n">3</span>
-          <span className="stat-l">Olimpíadas científicas</span>
+          <span className="stat-n">{data.stat3Numero}</span>
+          <span className="stat-l">{data.stat3Label}</span>
         </div>
         <div className="stat">
-          <span className="stat-n">∞</span>
-          <span className="stat-l">Curiosidade pelo universo</span>
+          <span className="stat-n">{data.stat4Numero}</span>
+          <span className="stat-l">{data.stat4Label}</span>
         </div>
       </div>
     </section>

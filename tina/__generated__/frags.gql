@@ -1,0 +1,99 @@
+fragment HeroParts on Hero {
+  __typename
+  tag
+  descricao
+  btnPrimarioTexto
+  btnPrimarioLink
+  btnSecundarioTexto
+  btnSecundarioLink
+}
+
+fragment SobreParts on Sobre {
+  __typename
+  titulo
+  paragrafo1
+  paragrafo2
+  paragrafo3
+  stat1Numero
+  stat1Label
+  stat2Numero
+  stat2Label
+  stat3Numero
+  stat3Label
+  stat4Numero
+  stat4Label
+}
+
+fragment PremiosParts on Premios {
+  __typename
+  lista {
+    __typename
+    icone
+    titulo
+    descricao
+    ano
+  }
+}
+
+fragment ProjetosParts on Projetos {
+  __typename
+  lista {
+    __typename
+    numero
+    titulo
+    descricao
+    badge
+    link
+  }
+}
+
+fragment GaleriaParts on Galeria {
+  __typename
+  itens {
+    __typename
+    src
+    alt
+  }
+}
+
+fragment VideosParts on Videos {
+  __typename
+  lista {
+    __typename
+    titulo
+    subtitulo
+    link
+    thumb
+  }
+}
+
+fragment QuizParts on Quiz {
+  __typename
+  titulo
+  descricao
+  opcoes {
+    __typename
+    texto
+  }
+  btnTexto
+  btnLink
+}
+
+fragment LivroParts on Livro {
+  __typename
+  titulo
+  paragrafo1
+  paragrafo2
+  btn1Texto
+  btn1Link
+  btn2Texto
+  btn2Link
+}
+
+fragment FooterParts on Footer {
+  __typename
+  instagramLink
+  youtubeLink
+  contatoEmail
+  copyright
+}

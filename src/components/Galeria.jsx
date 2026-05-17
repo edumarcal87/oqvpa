@@ -1,16 +1,9 @@
-// Substitua os emojis por imagens reais colocando os arquivos em public/images/
-// Ex: { src: '/oqvpa/images/quadro1.jpg', alt: 'Galáxia' }
-const itens = [
-  { emoji: '🌌', alt: 'Galáxia' },
-  { emoji: '🪐', alt: 'Saturno' },
-  { emoji: '✨', alt: 'Estrelas' },
-  { emoji: '🌠', alt: 'Meteoro' },
-  { emoji: '🌙', alt: 'Lua' },
-  { emoji: '☀️', alt: 'Sol' },
-  { emoji: '🔭', alt: 'Telescópio' },
-]
+import { useContent } from '../hooks/useContent'
 
 export default function Galeria() {
+  const { data, loading } = useContent('galeria')
+  if (loading || !data) return null
+
   return (
     <section className="galeria" id="galeria">
       <span className="stag">Quadros e Arte</span>
@@ -19,11 +12,12 @@ export default function Galeria() {
         Astronomia e arte se encontram em cada obra — o cosmos interpretado por um jovem olhar criativo.
       </p>
       <div className="gallery-grid">
-        {itens.map((item, i) => (
+        {data.itens.map((item, i) => (
           <div className="g-item" key={i}>
-            {/* Quando tiver as imagens, troque o emoji por:
-                <img src={item.src} alt={item.alt} /> */}
-            {item.emoji}
+            {item.src
+              ? <img src={item.src} alt={item.alt} />
+              : <span style={{ fontSize: '2rem' }}>🌌</span>
+            }
           </div>
         ))}
       </div>

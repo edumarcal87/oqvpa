@@ -1,0 +1,32 @@
+{
+  "lista": [
+    {
+      "numero": "01",
+      "titulo": "Astrolábio Analógico",
+      "descricao": "Ferramenta de astronomia de baixo custo para mapeamento celeste manual",
+      "badge": "Premiado FEBRACE",
+      "link": "#"
+    },
+    {
+      "numero": "02",
+      "titulo": "NilponAstro",
+      "descricao": "Aplicativo educacional de astronomia para crianças em linguagem acessível",
+      "badge": "App Educacional",
+      "link": "#"
+    },
+    {
+      "numero": "03",
+      "titulo": "O Que Vem Por Aí — Série",
+      "descricao": "Canal e série de divulgação científica explorando fenômenos astronômicos",
+      "badge": "Divulgação",
+      "link": "#"
+    },
+    {
+      "numero": "04",
+      "titulo": "Jogo do Explorador",
+      "descricao": "Jogo educativo sobre exploração espacial e astronomia para o público infantil",
+      "badge": "Gamificação",
+      "link": "#"
+    }
+  ]
+}

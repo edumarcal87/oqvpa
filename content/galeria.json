@@ -1,0 +1,11 @@
+{
+  "itens": [
+    { "src": "/images/quadro1.jpg", "alt": "Galáxia" },
+    { "src": "/images/quadro2.jpg", "alt": "Saturno" },
+    { "src": "/images/quadro3.jpg", "alt": "Estrelas" },
+    { "src": "/images/quadro4.jpg", "alt": "Meteoro" },
+    { "src": "/images/quadro5.jpg", "alt": "Lua" },
+    { "src": "/images/quadro6.jpg", "alt": "Sol" },
+    { "src": "/images/quadro7.jpg", "alt": "Telescópio" }
+  ]
+}

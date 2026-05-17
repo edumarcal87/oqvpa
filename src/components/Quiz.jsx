@@ -1,28 +1,23 @@
-const opcoes = [
-  '🌍 Sistema Solar',
-  '⭐ Estrelas e Constelações',
-  '🚀 Exploração Espacial',
-  '🔭 Instrumentos Astronômicos',
-]
+import { useContent } from '../hooks/useContent'
 
 export default function Quiz() {
+  const { data, loading } = useContent('quiz')
+  if (loading || !data) return null
+
   return (
     <section className="quiz-section" id="quiz">
       <div className="quiz-wrap">
         <span className="stag" style={{ display: 'block', marginBottom: '0.8rem' }}>
           Quiz Time
         </span>
-        <h2>Você sabe astronomia?</h2>
-        <p>
-          Teste seus conhecimentos sobre o universo com as perguntas do Bernardo.
-          Quanto você sabe sobre o cosmos?
-        </p>
+        <h2>{data.titulo}</h2>
+        <p>{data.descricao}</p>
         <div className="quiz-opts">
-          {opcoes.map((op, i) => (
-            <button className="qopt" key={i}>{op}</button>
+          {data.opcoes.map((op, i) => (
+            <button className="qopt" key={i}>{op.texto}</button>
           ))}
         </div>
-        <a className="btn-p" href="#">Começar o Quiz</a>
+        <a className="btn-p" href={data.btnLink || '#'}>{data.btnTexto}</a>
       </div>
     </section>
   )
