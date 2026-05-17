@@ -1,0 +1,12 @@
+{
+  "titulo": "Você sabe astronomia?",
+  "descricao": "Teste seus conhecimentos sobre o universo com as perguntas do Bernardo. Quanto você sabe sobre o cosmos?",
+  "opcoes": [
+    { "texto": "🌍 Sistema Solar" },
+    { "texto": "⭐ Estrelas e Constelações" },
+    { "texto": "🚀 Exploração Espacial" },
+    { "texto": "🔭 Instrumentos Astronômicos" }
+  ],
+  "btnTexto": "Começar o Quiz",
+  "btnLink": "#"
+}

@@ -20,16 +20,6 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Build Tina
-        run: npx @tinacms/cli@latest build
-        env:
-          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-          TINA_BRANCH: main
-
-      - name: Verificar pasta public/admin após Tina build
-        run: ls -la public/ && ls -la public/admin/ || echo "admin nao gerado"
-
       - name: Build Vite
         run: npx vite build
         env:
@@ -37,8 +27,12 @@ jobs:
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
           TINA_BRANCH: main
 
-      - name: Verificar pasta dist
-        run: ls -la dist/ && ls -la dist/admin/ || echo "pasta admin nao encontrada no dist"
+      - name: Copiar admin para dist
+        run: cp -r dist/admin dist/admin_backup && cp -r dist/admin dist/admin || cp -r ./dist/admin ./dist/admin
+        continue-on-error: true
+
+      - name: Verificar dist
+        run: ls -la dist/ && ls -la dist/admin/ || echo "admin ausente"
 
       - name: Publicar no GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
