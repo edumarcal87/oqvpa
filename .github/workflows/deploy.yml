@@ -27,15 +27,16 @@ jobs:
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
           TINA_BRANCH: main
 
-      - name: Copiar admin para dist
-        run: cp -r dist/admin ./admin_temp && cp -r ./admin_temp dist/admin
-        continue-on-error: true
-
-      - name: Copiar admin do repositório para dist
+      - name: Listar tudo no repositório e no dist
         run: |
-          mkdir -p dist/admin
-          cp -r dist/admin/* dist/admin/ 2>/dev/null || true
+          echo "=== RAIZ DO REPO ==="
+          ls -la
+          echo "=== PASTA ADMIN NA RAIZ ==="
+          ls -la admin/ || echo "NAO EXISTE"
+          echo "=== PASTA DIST ==="
           ls -la dist/
+          echo "=== PASTA DIST/ADMIN ==="
+          ls -la dist/admin/ || echo "NAO EXISTE"
 
       - name: Publicar no GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
