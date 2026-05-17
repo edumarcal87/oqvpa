@@ -34,15 +34,14 @@ jobs:
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
           TINA_BRANCH: main
 
-      - name: Copiar admin e remover gitignore interno
+      - name: Copiar admin e corrigir caminhos
         run: |
           cp -r public/admin/. dist/admin/
           rm -f dist/admin/.gitignore
-          echo "=== dist/admin final ==="
-          ls -la dist/admin/
-
-      - name: Ver conteudo do admin/index.html
-        run: cat dist/admin/index.html
+          sed -i 's|/admin/assets/|/oqvpa/admin/assets/|g' dist/admin/index.html
+          sed -i 's|href="/vite.svg"|href="/oqvpa/vite.svg"|g' dist/admin/index.html
+          echo "=== index.html corrigido ==="
+          cat dist/admin/index.html
 
       - name: Publicar no GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -50,4 +49,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           force_orphan: true
-
