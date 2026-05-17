@@ -7,7 +7,8 @@ export default defineConfig({
 
   build: {
     outputFolder: "admin",
-    publicFolder: "dist",
+    publicFolder: "public",
+    basePath: "oqvpa",
   },
 
   media: {
