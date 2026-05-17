@@ -41,9 +41,13 @@ jobs:
           echo "=== dist/admin final ==="
           ls -la dist/admin/
 
+      - name: Ver conteudo do admin/index.html
+        run: cat dist/admin/index.html
+
       - name: Publicar no GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           force_orphan: true
+
