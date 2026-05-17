@@ -20,6 +20,22 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
+      - name: Build Tina (gera admin)
+        run: npx @tinacms/cli build
+        env:
+          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+          TINA_BRANCH: main
+
+      - name: Verificar onde o admin foi gerado
+        run: |
+          echo "=== public/admin ==="
+          ls -la public/admin/ || echo "NAO EXISTE"
+          echo "=== dist/admin ==="
+          ls -la dist/admin/ || echo "NAO EXISTE"
+          echo "=== raiz ==="
+          ls -la | grep admin || echo "NAO EXISTE NA RAIZ"
+
       - name: Build Vite
         run: npx vite build
         env:
@@ -27,16 +43,17 @@ jobs:
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
           TINA_BRANCH: main
 
-      - name: Listar tudo no repositório e no dist
+      - name: Mover admin para dist
         run: |
-          echo "=== RAIZ DO REPO ==="
-          ls -la
-          echo "=== PASTA ADMIN NA RAIZ ==="
-          ls -la admin/ || echo "NAO EXISTE"
-          echo "=== PASTA DIST ==="
+          if [ -d "public/admin" ]; then
+            echo "Copiando de public/admin"
+            cp -r public/admin dist/admin
+          elif [ -d "dist/admin" ]; then
+            echo "Admin ja esta no dist"
+          else
+            echo "Admin nao encontrado em lugar nenhum!"
+          fi
           ls -la dist/
-          echo "=== PASTA DIST/ADMIN ==="
-          ls -la dist/admin/ || echo "NAO EXISTE"
 
       - name: Publicar no GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
