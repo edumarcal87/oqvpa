@@ -1,0 +1,262 @@
+{
+  "lista": [
+    {
+      "icone": "💎",
+      "titulo": "Rubi MATIFIC",
+      "descricao": "Primeira conquista do nível Rubi na Olimpíada MATIFIC, marcando o início de uma trajetória de excelência em matemática.",
+      "ano": "2023"
+    },
+    {
+      "icone": "🏅",
+      "titulo": "Menção TNM",
+      "descricao": "Menção Honrosa no Torneio Nacional de Matemática da EOBA, mantendo alto nível de desempenho na competição.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🏅 ",
+      "titulo": "Menção TBC",
+      "descricao": "Menção Honrosa no Torneio Brasileiro de Ciências da SELETA, reconhecendo o talento científico multidisciplinar.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🏅",
+      "titulo": "Menção SPECIES",
+      "descricao": "Destaque na Olimpíada de Biologia do MEDALHEI pelo segundo ano, aprofundando o estudo dos seres vivos.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🏅",
+      "titulo": "Menção PRISMA",
+      "descricao": "Menção Honrosa na Olimpíada de Artes do MEDALHEI, unindo ciência e expressão artística.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🏅",
+      "titulo": "Menção TOP Português",
+      "descricao": "Reconhecimento na competição Individual de Língua Portuguesa, demonstrando excelência na comunicação.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🏅",
+      "titulo": "Menção ONIA",
+      "descricao": "Menção Honrosa na Olimpíada Nacional de Inteligência Artificial, explorando o futuro da tecnologia.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🏅",
+      "titulo": "Honorable Mention SMETA Matemática",
+      "descricao": "Reconhecimento internacional na Olimpíada de Matemática da SMETA OLYMPIAD, competindo com jovens do mundo todo.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🏅",
+      "titulo": "Menção ONC",
+      "descricao": "Menção Honrosa na Olimpíada Nacional de Ciências, destacando-se entre os melhores jovens cientistas do país.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥉",
+      "titulo": "Bronze OASTRA Astronomia",
+      "descricao": "Bronze na Olimpíada de Astronomia da LIASTRA, aprofundando o conhecimento sobre estrelas e galáxias.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥉",
+      "titulo": "Bronze OBICT",
+      "descricao": "Bronze na Olimpíada Brasileira de Inovação Científica e Tecnológica, reconhecendo a criatividade científica.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥉",
+      "titulo": "Bronze SMETA",
+      "descricao": "Mais uma medalha internacional na SMETA OLYMPIAD, reforçando a presença do Brasil nas competições globais.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥉",
+      "titulo": "Bronze PRINCIPIA",
+      "descricao": "Bronze na Olimpíada de Física e Astronomia do MEDALHEI, desvendando as leis que governam o universo.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥉 ",
+      "titulo": "Bronze APIS ",
+      "descricao": "Bronze na Olimpíada de Linguagens do MEDALHEI, unindo ciência e comunicação de forma criativa.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥉",
+      "titulo": "Bronze CARBON ",
+      "descricao": "Bronze na Olimpíada de Química do MEDALHEI, explorando o fascinante mundo das transformações químicas.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥉 ",
+      "titulo": "Bronze EUREKA",
+      "descricao": "Bronze na Olimpíada de Tecnologia do MEDALHEI, aplicando criatividade na solução de desafios tecnológicos.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥉 ",
+      "titulo": " Bronze OBRL",
+      "descricao": "Medalha de bronze na Olimpíada Brasileira de Raciocínio Lógico, destacando o pensamento analítico e estratégico.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥉",
+      "titulo": "Bronze SMC",
+      "descricao": "Bronze na Singapore Mathematics Challenge, competição internacional de matemática com participantes de dezenas de países.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥈",
+      "titulo": "Prata TNC",
+      "descricao": "Prata no Torneio Nacional de Ciências da EOBA pelo segundo ano consecutivo, consolidando o talento científico.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥈",
+      "titulo": "Prata TNA",
+      "descricao": "Mais uma prata no Torneio Nacional de Astronomia da EOBA, reafirmando a consistência nas ciências espaciais.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥈",
+      "titulo": "Prata ONAD",
+      "descricao": "Prata na II Olimpíada Nacional de Astronomia Digital, competição que une tecnologia e astronomia.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥈",
+      "titulo": "Prata COPERNICUS ",
+      "descricao": "Prata na competição internacional de ciências naturais COPERNICUS, representando o Brasil no cenário global.",
+      "ano": "2025"
+    },
+    {
+      "icone": "💎",
+      "titulo": "Rubi MATIFIC",
+      "descricao": "Segundo ano consecutivo alcançando o nível Rubi na Olimpíada MATIFIC, confirmando a excelência em matemática.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥇",
+      "titulo": "Ouro OASTRA Neurociência ",
+      "descricao": "Ouro na Olimpíada de Neurociência da LIASTRA, unindo ciência e curiosidade sobre o funcionamento do cérebro.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥇",
+      "titulo": "Ouro OASTRA Astrofísica ",
+      "descricao": "Ouro na Olimpíada de Astrofísica da LIASTRA, explorando os fenômenos mais extremos do universo.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥇",
+      "titulo": "Ouro Oceano",
+      "descricao": "Primeiro lugar na Olimpíada do Oceano, destacando-se no estudo das ciências ambientais e marinhas.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥇",
+      "titulo": "Ouro OBA",
+      "descricao": "Medalha de ouro na Olimpíada Brasileira de Astronomia e Astronáutica, o maior reconhecimento nacional na área.",
+      "ano": "2025"
+    },
+    {
+      "icone": "🥉",
+      "titulo": "Bronze Oceano",
+      "descricao": "Reconhecimento na Olimpíada do Oceano, demonstrando interesse pelas ciências marinhas e ambientais.",
+      "ano": "2024"
+    },
+    {
+      "icone": "🥉",
+      "titulo": "Bronze CELESTIA",
+      "descricao": "Medalha de bronze na Olimpíada de Astronomia CELESTIA, explorando os fenômenos que regem o universo.",
+      "ano": "2024"
+    },
+    {
+      "icone": "🥉",
+      "titulo": " Bronze OBMEP Mirim",
+      "descricao": "Bronze na versão mirim da mais importante olimpíada de matemática do Brasil, organizada pelo IMPA.",
+      "ano": "2024"
+    },
+    {
+      "icone": "🥈",
+      "titulo": " Prata Atena",
+      "descricao": "Medalha de prata na Olimpíada de Astronomia do Clube de Astronomia Atena, aprofundando o conhecimento do cosmos.",
+      "ano": "2024"
+    },
+    {
+      "icone": "🥈",
+      "titulo": " Prata TNC",
+      "descricao": "Prata no Torneio Nacional de Ciências da EOBA, destacando-se entre jovens cientistas de todo o Brasil.",
+      "ano": "2024"
+    },
+    {
+      "icone": "🥈",
+      "titulo": " Prata TNA",
+      "descricao": "Prata no Torneio Nacional de Astronomia da EOBA, consolidando o domínio sobre as ciências do espaço.",
+      "ano": "2024"
+    },
+    {
+      "icone": "🥈",
+      "titulo": " Prata THEOREM",
+      "descricao": "Medalha de prata na Olimpíada de Matemática do MEDALHEI, demonstrando raciocínio lógico e habilidade analítica.",
+      "ano": "2024"
+    },
+    {
+      "icone": "🥈",
+      "titulo": " Prata SPECIES",
+      "descricao": "Destaque na Olimpíada de Biologia do MEDALHEI, explorando os mistérios da vida e dos ecossistemas.",
+      "ano": "2024"
+    },
+    {
+      "icone": "🥈",
+      "titulo": " Prata OBA",
+      "descricao": "Prata na Olimpíada Brasileira de Astronomia e Astronáutica, uma das competições científicas mais tradicionais do país.",
+      "ano": "2024"
+    },
+    {
+      "icone": "💎",
+      "titulo": " Rubi MATIFIC",
+      "descricao": "Alcançou o nível Rubi, a mais alta distinção da Olimpíada MATIFIC, plataforma internacional de matemática.",
+      "ano": "2024"
+    },
+    {
+      "icone": "🥇",
+      "titulo": " Ouro TNM",
+      "descricao": "Medalha de ouro no Torneio Nacional de Matemática da EOBA, conquistada com desempenho de destaque entre os melhores jovens matemáticos do Brasil.",
+      "ano": "2024"
+    },
+    {
+      "icone": "🏅",
+      "titulo": " Menção Filmolab",
+      "descricao": "Reconhecimento na Olimpíada de Filmes pela criatividade e talento na produção audiovisual científica.",
+      "ano": "2026"
+    },
+    {
+      "icone": "🏅",
+      "titulo": " Menção CELESTIA",
+      "descricao": "Destaque na Olimpíada de Astronomia do MEDALHEI, reforçando a paixão e o conhecimento pelo universo.",
+      "ano": "2026"
+    },
+    {
+      "icone": "🥉",
+      "titulo": "Bronze SMETA ",
+      "descricao": " Medalha de bronze na competição internacional de ciências, representando o Brasil entre jovens cientistas do mundo todo.",
+      "ano": "2026"
+    },
+    {
+      "icone": "🥉",
+      "titulo": "Bronze EUREKA",
+      "descricao": " Reconhecimento na Olimpíada de Tecnologia do MEDALHEI, demonstrando habilidade e criatividade na resolução de desafios tecnológicos.",
+      "ano": "2026"
+    },
+    {
+      "icone": "🥇",
+      "titulo": "Ouro com Perfect Score",
+      "descricao": " Conquistou a pontuação máxima no Torneio de Ciências Exploradores do Saber, alcançando o nível mais alto de excelência na competição.",
+      "ano": "2026"
+    }
+  ]
+}

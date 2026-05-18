@@ -1,0 +1,91 @@
+{
+  "titulo": "Cursos",
+  "subtitulo": "Formação e aprendizado contínuo",
+  "descricao": "Cursos realizados por Bernardo em diversas áreas do conhecimento científico e tecnológico.",
+  "lista": [
+    {
+      "icone": "",
+      "titulo": "Ciência em Show",
+      "instituicao": "RAIS ",
+      "ano": "2026",
+      "descricao": "10 horas",
+      "link": ""
+    },
+    {
+      "titulo": "Disk Detective: Ciência Cidadã aplicada à detecção de discos protoplanetários",
+      "instituicao": "IFMT ",
+      "ano": "2025",
+      "descricao": " 40 horas "
+    },
+    {
+      "titulo": "Paleontologia Kids e Geologia da Terra",
+      "instituicao": "Laboratório de Paleoecologia e Paleoicnologia - LPP",
+      "ano": "2025",
+      "descricao": "8 horas"
+    },
+    {
+      "titulo": "Conhecendo o Origami",
+      "instituicao": "RAIS",
+      "ano": "2025",
+      "descricao": "16 Horas"
+    },
+    {
+      "titulo": "OBA 2025",
+      "instituicao": "RAIS",
+      "ano": "2025",
+      "descricao": " 18 horas"
+    },
+    {
+      "titulo": "Sustentabilidade em Marte",
+      "instituicao": "Habitat Marte",
+      "ano": "2025",
+      "descricao": "1 Hora"
+    },
+    {
+      "titulo": "Clube de Leitura + Podcast Literário",
+      "instituicao": "RAIS",
+      "ano": "2024",
+      "descricao": "17 Horas"
+    },
+    {
+      "titulo": "Reconhecimento de Céu",
+      "instituicao": "Planetário do Carmo da SVMA",
+      "ano": "2024",
+      "descricao": "10 Horas"
+    },
+    {
+      "titulo": "Introdução à astrofísica estelar",
+      "instituicao": "Planetário do Carmo da SVMA ",
+      "ano": "2024",
+      "descricao": "10 Horas"
+    },
+    {
+      "titulo": "Os Planetas e o Clima Espacial",
+      "instituicao": " Mais que Raios",
+      "ano": "2024"
+    },
+    {
+      "titulo": "Asteroide 101955 Bennu - AsteroidDay ",
+      "instituicao": "Nicolinha&Kids ",
+      "ano": "2024"
+    },
+    {
+      "titulo": "Além dos Astros: Descubra os Segredos do Universo ",
+      "instituicao": "RAIS",
+      "ano": "2023",
+      "descricao": "15 horas "
+    },
+    {
+      "titulo": "Um voo pelo universo dos Foguetes: teoria e prática",
+      "instituicao": "AEB ",
+      "ano": "2023",
+      "descricao": "20 horas"
+    },
+    {
+      "titulo": "Programação com Minecraft e Inteligência Emocional ",
+      "instituicao": " MargiTeens",
+      "ano": "2022",
+      "descricao": "10 Horas"
+    }
+  ]
+}

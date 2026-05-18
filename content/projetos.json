@@ -1,0 +1,88 @@
+{
+  "lista": [
+    {
+      "numero": "01",
+      "titulo": "NASA Space Apps Challenge 2023 ",
+      "descricao": "NASA Space Apps Challenge 2023 ",
+      "badge": "Projeto Premiado",
+      "link": "https://www.spaceappschallenge.org/2023/find-a-team/eclipsedatics/"
+    },
+    {
+      "numero": "02",
+      "titulo": "NASA Space Apps Challenge 2025 ",
+      "descricao": "O NASA International Space Apps Challenge é um evento global que reúne pessoas de todo o mundo para usar dados abertos da NASA e de outras agências espaciais para resolver problemas reais usando a tecnologia.",
+      "badge": "Projeto Premiado",
+      "link": "https://www.spaceappschallenge.org/2025/find-a-team/meteors-exploders/?tab=details"
+    },
+    {
+      "numero": "03",
+      "titulo": "International Star Kids Awards (ISKA) 2023",
+      "descricao": "Plataforma global que celebra e reconhece os talentos excepcionais de crianças ao redor do mundo na categoria SPACE SCIENCE & ASTRONOMY",
+      "badge": "Certificado",
+      "link": "#"
+    },
+    {
+      "numero": "04",
+      "titulo": "Participação no Painel na 22ª Semana Nacional de Ciência e Tecnologia Do MCTI",
+      "descricao": "Bernardo participou como painelista convidado no painel 'Vem Caçar Asteroide com Nicolinha', durante a 22ª Semana Nacional de Ciência e Tecnologia (SNCT) do MCTI, em Brasília (DF)",
+      "badge": "Participação",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2025/10/caca-asteroides-mcti-criancas-e-adolescentes-se-destacam-em-seminario-internacional"
+    },
+    {
+      "numero": "05",
+      "titulo": "Disseminando o Conhecimento: Aulas de Astronomia para Jovens",
+      "descricao": "Atua ativamente na popularização da ciência ministrando aulas didáticas de astronomia voltadas para o público infantil. Com uma linguagem acessível e dinâmica, ele inspira outras crianças a olharem para o céu e compreenderem o universo.",
+      "badge": "Contribuição",
+      "link": "https://www.youtube.com/shorts/1yWHmm1r-Rk"
+    },
+    {
+      "numero": "06",
+      "titulo": "Aulão Preparatório para a OBA - Nicolinha Kids",
+      "descricao": " Aulão preparatório para as olimpíadas brasileiras de astronomia, para os membros do Clube da Nicolinha.",
+      "badge": "Contribuição",
+      "link": "https://www.youtube.com/shorts/PdE5JPWFl48"
+    },
+    {
+      "numero": "07",
+      "titulo": "Embaixador - Nasa Space Apps Campinas",
+      "descricao": "Embaixador do projeto Nasa Space Apps Campinas para apoiar a divulgação cientifica.",
+      "badge": "Reconhecimento",
+      "link": "#"
+    },
+    {
+      "numero": "08",
+      "titulo": "Membro Mensa Brasil",
+      "descricao": "Membro da Mensa Brasil, afiliada oficial no Brasil da Mensa Internacional, a maior e mais antiga sociedade de alto Quociente de Inteligência (QI) do mundo.",
+      "badge": "Membro",
+      "link": "#"
+    },
+    {
+      "numero": "09",
+      "titulo": "Astronauta Análogo",
+      "descricao": "MISSÃO ESPACIAL VIRTUAL ANÁLOGA n. 194 do Habitat Marte - 2024",
+      "badge": "Reconhecimento",
+      "link": "#"
+    },
+    {
+      "numero": "10",
+      "titulo": "Supernova SN2025ifq",
+      "descricao": "Descoberta da supernova SN2025ifq através do Projeto Kilonova Seekers",
+      "badge": "Reconhecimento",
+      "link": "https://goto- obs.github.io/knseekers-results/discovery/2025/05/08/GOTO24jvr.html"
+    },
+    {
+      "numero": "11",
+      "titulo": "Cientista cidadão",
+      "descricao": "Cientista cidadão colaborador voluntário da plataforma Zooniverse",
+      "badge": "Reconhecimento",
+      "link": "https://www.zooniverse.org/"
+    },
+    {
+      "numero": "12",
+      "titulo": "Cientista Cidadão ",
+      "descricao": "Cientista Cidadão colaborador voluntário do Projeto Caça Asteroides em parceria com IASC/Nasa Partner e MCTI ",
+      "badge": "Reconhecimento",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2025/10/caca-asteroides-mcti-criancas-e-adolescentes-se-destacam-em-seminario-internacional"
+    }
+  ]
+}
