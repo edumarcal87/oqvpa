@@ -21,7 +21,6 @@ export default function Livro() {
           <p>{data.paragrafo2}</p>
           <div className="book-actions">
             <a className="btn-p" href={data.btn1Link || '#'}>{data.btn1Texto}</a>
-            <a className="btn-o" href={data.btn2Link || '#'}>{data.btn2Texto}</a>
           </div>
         </div>
       </div>

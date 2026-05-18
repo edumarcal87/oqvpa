@@ -33,7 +33,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-avatar">
-        <img src={`${BASE}images/bernardo.jpeg`} alt="Bernardo de Lacerda" />
+        <img src={`${BASE}images/bernardo.jpg`} alt="Bernardo de Lacerda" />
       </div>
     </section>
   )

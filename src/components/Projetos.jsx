@@ -1,8 +1,17 @@
 import { useContent } from '../hooks/useContent'
+import { useState } from 'react'
 
 export default function Projetos() {
   const { data, loading } = useContent('projetos')
+  const [pagina, setPagina] = useState(0)
+
   if (loading || !data) return null
+
+  const itensPorPagina = 5
+  const total = data.lista.length
+  const totalPaginas = Math.ceil(total / itensPorPagina)
+  const inicio = pagina * itensPorPagina
+  const itensPagina = data.lista.slice(inicio, inicio + itensPorPagina)
 
   return (
     <section className="projetos" id="projetos">
@@ -11,8 +20,9 @@ export default function Projetos() {
       <p className="ssub">
         Cada projeto nasce de uma pergunta e cresce com curiosidade, dedicação e método científico.
       </p>
+
       <div className="proj-list">
-        {data.lista.map((p, i) => (
+        {itensPagina.map((p, i) => (
           <a className="proj-row" href={p.link || '#'} key={i}>
             <span className="proj-num">{p.numero}</span>
             <div>
@@ -23,6 +33,37 @@ export default function Projetos() {
           </a>
         ))}
       </div>
+
+      {totalPaginas > 1 && (
+        <div className="carousel-nav">
+          <button
+            className="carousel-btn"
+            onClick={() => setPagina(p => Math.max(0, p - 1))}
+            disabled={pagina === 0}
+          >
+            ←
+          </button>
+          <div className="carousel-dots">
+            {Array.from({ length: totalPaginas }).map((_, i) => (
+              <button
+                key={i}
+                className={`carousel-dot ${i === pagina ? 'active' : ''}`}
+                onClick={() => setPagina(i)}
+              />
+            ))}
+          </div>
+          <button
+            className="carousel-btn"
+            onClick={() => setPagina(p => Math.min(totalPaginas - 1, p + 1))}
+            disabled={pagina === totalPaginas - 1}
+          >
+            →
+          </button>
+          <span className="carousel-count">
+            {inicio + 1}–{Math.min(inicio + itensPorPagina, total)} de {total}
+          </span>
+        </div>
+      )}
     </section>
   )
 }
