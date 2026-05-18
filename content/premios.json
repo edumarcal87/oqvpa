@@ -156,7 +156,12 @@
       "descricao": "Primeiro lugar na Olimpíada do Oceano, destacando-se no estudo das ciências ambientais e marinhas.",
       "ano": "2025"
     },
-    {},
+    {
+      "icone": "🥇",
+      "titulo": "Ouro OBA",
+      "descricao": "Medalha de ouro na Olimpíada Brasileira de Astronomia e Astronáutica, o maior reconhecimento nacional na área.",
+      "ano": "2025"
+    },
     {},
     {},
     {}
