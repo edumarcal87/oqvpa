@@ -168,7 +168,12 @@
       "descricao": "Reconhecimento na Olimpíada do Oceano, demonstrando interesse pelas ciências marinhas e ambientais.",
       "ano": "2024"
     },
-    {},
+    {
+      "icone": "🥉",
+      "titulo": "Bronze CELESTIA",
+      "descricao": "Medalha de bronze na Olimpíada de Astronomia CELESTIA, explorando os fenômenos que regem o universo.",
+      "ano": "2024"
+    },
     {}
   ]
 }
