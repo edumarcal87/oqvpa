@@ -1,15 +1,15 @@
 {
-  "titulo": "Engajamento Científico",
-  "subtitulo": "Clubes de STEAM e Astronomia",
+  "titulo": "Engajamento Científico, Clubes de STEAM e Astronomia",
+  "subtitulo": "",
   "descricao": "Participação ativa em clubes, grupos e iniciativas de divulgação científica.",
   "lista": [
     {
       "icone": "🌌",
-      "titulo": "Clube de Astronomia",
-      "organizacao": "Nome da Organização",
+      "titulo": "Clube",
+      "organizacao": "Nicolinha&Kids",
       "ano": "2024",
-      "descricao": "Descrição da participação no clube.",
-      "link": ""
+      "descricao": "O clube tem o objetivo de Incentivar, auxiliar e oportunizar as crianças a participarem das diversas áreas de aplicação da ciência, tecnologia, matemática, astronomia, artes etc. Gerando oportunidades de aprendizados e comunicação com crianças de diversas partes do Brasil e no mundo.",
+      "link": "https://nicolinhaekids.com.br/"
     }
   ]
 }
