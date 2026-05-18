@@ -278,6 +278,8 @@ export default defineConfig({
           { type: "string", name: "instagramLink", label: "Link do Instagram" },
           { type: "string", name: "youtubeLink", label: "Link do YouTube" },
           { type: "string", name: "contatoEmail", label: "E-mail de contato" },
+          { type: "string", name: "lattesLink", label: "Link do Lattes" },
+          { type: "string", name: "portfolioLink", label: "Link do Portfólio (PDF — ex: /oqvpa/files/portfolio.pdf)" },
           { type: "string", name: "copyright", label: "Texto de copyright" },
         ],
       },

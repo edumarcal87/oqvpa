@@ -95,5 +95,7 @@ fragment FooterParts on Footer {
   instagramLink
   youtubeLink
   contatoEmail
+  lattesLink
+  portfolioLink
   copyright
 }

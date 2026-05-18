@@ -12,6 +12,27 @@
   --font-b: 'Nunito', sans-serif;
 }
 
+/* ── CONTAINER CENTRALIZADO ─────────────────── */
+.hero,
+.sobre,
+.premios,
+.projetos,
+.galeria,
+.videos,
+.quiz-section,
+.livro,
+.footer {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav > * {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ── UTILITÁRIOS ───────────────────────────── */
 .divider {
   height: 1px;
@@ -75,18 +96,46 @@
 }
 .btn-o:hover { border-color: var(--accent); color: var(--accent); }
 
+/* ── CONTAINER GLOBAL ──────────────────────── */
+.hero,
+.sobre,
+.premios,
+.projetos,
+.galeria,
+.videos,
+.quiz-section,
+.livro {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 /* ── NAV ───────────────────────────────────── */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 4rem;
   background: rgba(10, 14, 26, 0.88);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(59, 207, 255, 0.1);
+}
+
+.nav > * {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-logo {
@@ -105,6 +154,7 @@
   display: flex;
   gap: 2rem;
   list-style: none;
+  align-items: center;
 }
 
 .nav-links a {
@@ -115,6 +165,17 @@
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--accent); }
+
+.nav-link-destaque {
+  color: var(--accent) !important;
+  border: 1px solid rgba(59, 207, 255, 0.3);
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+  transition: background 0.2s !important;
+}
+.nav-link-destaque:hover {
+  background: rgba(59, 207, 255, 0.1);
+}
 
 /* ── HERO ──────────────────────────────────── */
 .hero {
@@ -586,8 +647,13 @@
 /* ── FOOTER ────────────────────────────────── */
 .footer {
   background: var(--deep);
-  padding: 2.5rem 4rem;
   border-top: 1px solid rgba(168, 200, 232, 0.06);
+}
+
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -606,6 +672,7 @@
   display: flex;
   gap: 1.75rem;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .footer-links a {

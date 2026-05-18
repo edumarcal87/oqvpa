@@ -647,6 +647,8 @@ export type Footer = Node & Document & {
   instagramLink?: Maybe<Scalars['String']['output']>;
   youtubeLink?: Maybe<Scalars['String']['output']>;
   contatoEmail?: Maybe<Scalars['String']['output']>;
+  lattesLink?: Maybe<Scalars['String']['output']>;
+  portfolioLink?: Maybe<Scalars['String']['output']>;
   copyright?: Maybe<Scalars['String']['output']>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
@@ -657,6 +659,8 @@ export type FooterFilter = {
   instagramLink?: InputMaybe<StringFilter>;
   youtubeLink?: InputMaybe<StringFilter>;
   contatoEmail?: InputMaybe<StringFilter>;
+  lattesLink?: InputMaybe<StringFilter>;
+  portfolioLink?: InputMaybe<StringFilter>;
   copyright?: InputMaybe<StringFilter>;
 };
 
@@ -959,6 +963,8 @@ export type FooterMutation = {
   instagramLink?: InputMaybe<Scalars['String']['input']>;
   youtubeLink?: InputMaybe<Scalars['String']['input']>;
   contatoEmail?: InputMaybe<Scalars['String']['input']>;
+  lattesLink?: InputMaybe<Scalars['String']['input']>;
+  portfolioLink?: InputMaybe<Scalars['String']['input']>;
   copyright?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -978,7 +984,7 @@ export type QuizPartsFragment = { __typename: 'Quiz', titulo?: string | null, de
 
 export type LivroPartsFragment = { __typename: 'Livro', titulo?: string | null, paragrafo1?: string | null, paragrafo2?: string | null, btn1Texto?: string | null, btn1Link?: string | null, btn2Texto?: string | null, btn2Link?: string | null };
 
-export type FooterPartsFragment = { __typename: 'Footer', instagramLink?: string | null, youtubeLink?: string | null, contatoEmail?: string | null, copyright?: string | null };
+export type FooterPartsFragment = { __typename: 'Footer', instagramLink?: string | null, youtubeLink?: string | null, contatoEmail?: string | null, lattesLink?: string | null, portfolioLink?: string | null, copyright?: string | null };
 
 export type HeroQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1137,7 +1143,7 @@ export type FooterQueryVariables = Exact<{
 }>;
 
 
-export type FooterQuery = { __typename?: 'Query', footer: { __typename: 'Footer', id: string, instagramLink?: string | null, youtubeLink?: string | null, contatoEmail?: string | null, copyright?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type FooterQuery = { __typename?: 'Query', footer: { __typename: 'Footer', id: string, instagramLink?: string | null, youtubeLink?: string | null, contatoEmail?: string | null, lattesLink?: string | null, portfolioLink?: string | null, copyright?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type FooterConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1149,7 +1155,7 @@ export type FooterConnectionQueryVariables = Exact<{
 }>;
 
 
-export type FooterConnectionQuery = { __typename?: 'Query', footerConnection: { __typename?: 'FooterConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'FooterConnectionEdges', cursor: string, node?: { __typename: 'Footer', id: string, instagramLink?: string | null, youtubeLink?: string | null, contatoEmail?: string | null, copyright?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type FooterConnectionQuery = { __typename?: 'Query', footerConnection: { __typename?: 'FooterConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'FooterConnectionEdges', cursor: string, node?: { __typename: 'Footer', id: string, instagramLink?: string | null, youtubeLink?: string | null, contatoEmail?: string | null, lattesLink?: string | null, portfolioLink?: string | null, copyright?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export const HeroPartsFragmentDoc = gql`
     fragment HeroParts on Hero {
@@ -1257,6 +1263,8 @@ export const FooterPartsFragmentDoc = gql`
   instagramLink
   youtubeLink
   contatoEmail
+  lattesLink
+  portfolioLink
   copyright
 }
     `;

@@ -419,6 +419,8 @@ type Footer implements Node & Document {
   instagramLink: String
   youtubeLink: String
   contatoEmail: String
+  lattesLink: String
+  portfolioLink: String
   copyright: String
   id: ID!
   _sys: SystemInfo!
@@ -429,6 +431,8 @@ input FooterFilter {
   instagramLink: StringFilter
   youtubeLink: StringFilter
   contatoEmail: StringFilter
+  lattesLink: StringFilter
+  portfolioLink: StringFilter
   copyright: StringFilter
 }
 
@@ -587,6 +591,8 @@ input FooterMutation {
   instagramLink: String
   youtubeLink: String
   contatoEmail: String
+  lattesLink: String
+  portfolioLink: String
   copyright: String
 }
 

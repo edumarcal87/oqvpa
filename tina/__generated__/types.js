@@ -111,6 +111,8 @@ export const FooterPartsFragmentDoc = gql`
   instagramLink
   youtubeLink
   contatoEmail
+  lattesLink
+  portfolioLink
   copyright
 }
     `;
