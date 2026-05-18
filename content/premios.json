@@ -228,7 +228,12 @@
       "descricao": "Medalha de ouro no Torneio Nacional de Matemática da EOBA, conquistada com desempenho de destaque entre os melhores jovens matemáticos do Brasil.",
       "ano": "2024"
     },
-    {},
+    {
+      "icone": "🏅",
+      "titulo": " Menção Filmolab",
+      "descricao": "Reconhecimento na Olimpíada de Filmes pela criatividade e talento na produção audiovisual científica.",
+      "ano": "2026"
+    },
     {},
     {},
     {},
