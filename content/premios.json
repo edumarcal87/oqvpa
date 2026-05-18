@@ -144,7 +144,12 @@
       "descricao": "Ouro na Olimpíada de Neurociência da LIASTRA, unindo ciência e curiosidade sobre o funcionamento do cérebro.",
       "ano": "2025"
     },
-    {},
+    {
+      "icone": "🥇",
+      "titulo": "Ouro OASTRA Astrofísica ",
+      "descricao": "Ouro na Olimpíada de Astrofísica da LIASTRA, explorando os fenômenos mais extremos do universo.",
+      "ano": "2025"
+    },
     {},
     {},
     {},
