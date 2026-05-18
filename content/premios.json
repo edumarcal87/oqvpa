@@ -162,7 +162,12 @@
       "descricao": "Medalha de ouro na Olimpíada Brasileira de Astronomia e Astronáutica, o maior reconhecimento nacional na área.",
       "ano": "2025"
     },
-    {},
+    {
+      "icone": "🥉",
+      "titulo": "Bronze Oceano",
+      "descricao": "Reconhecimento na Olimpíada do Oceano, demonstrando interesse pelas ciências marinhas e ambientais.",
+      "ano": "2024"
+    },
     {},
     {}
   ]
