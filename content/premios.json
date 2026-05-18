@@ -252,7 +252,12 @@
       "descricao": " Reconhecimento na Olimpíada de Tecnologia do MEDALHEI, demonstrando habilidade e criatividade na resolução de desafios tecnológicos.",
       "ano": "2026"
     },
-    {},
+    {
+      "icone": "🥇",
+      "titulo": "Ouro com Perfect Score",
+      "descricao": " Conquistou a pontuação máxima no Torneio de Ciências Exploradores do Saber, alcançando o nível mais alto de excelência na competição.",
+      "ano": "2026"
+    },
     {},
     {}
   ]
