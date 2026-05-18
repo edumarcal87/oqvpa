@@ -2,34 +2,6 @@
   "lista": [
     {
       "numero": "01",
-      "titulo": "Astrolábio Analógico",
-      "descricao": "Ferramenta de astronomia de baixo custo para mapeamento celeste manual",
-      "badge": "Premiado FEBRACE",
-      "link": "#"
-    },
-    {
-      "numero": "02",
-      "titulo": "NilponAstro",
-      "descricao": "Aplicativo educacional de astronomia para crianças em linguagem acessível",
-      "badge": "App Educacional",
-      "link": "#"
-    },
-    {
-      "numero": "03",
-      "titulo": "O Que Vem Por Aí — Série",
-      "descricao": "Canal e série de divulgação científica explorando fenômenos astronômicos",
-      "badge": "Divulgação",
-      "link": "#"
-    },
-    {
-      "numero": "03",
-      "titulo": "Jogo do Explorador",
-      "descricao": "Jogo educativo sobre exploração espacial e astronomia para o público infantil",
-      "badge": "Gamificação",
-      "link": "https://www.canva.com/design/DAGTrGAZ4MA/b95aAd-gcTGJ_GkbfrpHGg/view"
-    },
-    {
-      "numero": "01",
       "titulo": "NASA Space Apps Challenge 2023 ",
       "descricao": "NASA Space Apps Challenge 2023 ",
       "badge": "Projeto Premiado",
@@ -41,6 +13,13 @@
       "descricao": "O NASA International Space Apps Challenge é um evento global que reúne pessoas de todo o mundo para usar dados abertos da NASA e de outras agências espaciais para resolver problemas reais usando a tecnologia.",
       "badge": "Projeto Premiado",
       "link": "https://www.spaceappschallenge.org/2025/find-a-team/meteors-exploders/?tab=details"
+    },
+    {
+      "numero": "04",
+      "titulo": "International Star Kids Awards (ISKA) 2023",
+      "descricao": "Plataforma global que celebra e reconhece os talentos excepcionais de crianças ao redor do mundo na categoria SPACE SCIENCE & ASTRONOMY",
+      "badge": "Certificado",
+      "link": "#"
     }
   ]
 }
