@@ -77,6 +77,12 @@
       "titulo": "Bronze PRINCIPIA",
       "descricao": "Bronze na Olimpíada de Física e Astronomia do MEDALHEI, desvendando as leis que governam o universo.",
       "ano": "2025"
+    },
+    {
+      "icone": "🥉 ",
+      "titulo": "Bronze APIS ",
+      "descricao": "Bronze na Olimpíada de Linguagens do MEDALHEI, unindo ciência e comunicação de forma criativa.",
+      "ano": "2025"
     }
   ]
 }
