@@ -72,27 +72,11 @@
       "descricao": "Mais uma medalha internacional na SMETA OLYMPIAD, reforçando a presença do Brasil nas competições globais.",
       "ano": "2025"
     },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
+    {
+      "icone": "🥉",
+      "titulo": "Bronze PRINCIPIA",
+      "descricao": "Bronze na Olimpíada de Física e Astronomia do MEDALHEI, desvendando as leis que governam o universo.",
+      "ano": "2025"
+    }
   ]
 }
