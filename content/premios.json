@@ -1,40 +1,43 @@
 {
   "lista": [
     {
-      "icone": "🏆",
-      "titulo": "FEBRACE — Melhor Projeto",
-      "descricao": "Reconhecimento pela Feira Brasileira de Ciências e Engenharia com projeto de astronomia analógica.",
+      "icone": "💎",
+      "titulo": "Rubi MATIFIC",
+      "descricao": "Primeira conquista do nível Rubi na Olimpíada MATIFIC, marcando o início de uma trajetória de excelência em matemática.",
       "ano": "2023"
     },
-    {
-      "icone": "🥇",
-      "titulo": "Olimpíada Científica Nacional",
-      "descricao": "Medalha de ouro em olimpíada de astronomia e ciências do espaço, representando o Rio de Janeiro.",
-      "ano": "2022"
-    },
-    {
-      "icone": "🌟",
-      "titulo": "Certificado Internacional",
-      "descricao": "Reconhecimento internacional por projeto de astrofotografia e divulgação científica para jovens.",
-      "ano": "2023"
-    },
-    {
-      "icone": "🎖️",
-      "titulo": "Feira de Ciências Municipal",
-      "descricao": "Primeiro lugar na categoria ciências naturais com experimento de astronomia de baixo custo.",
-      "ano": "2021"
-    },
-    {
-      "icone": "📜",
-      "titulo": "Publicação Científica",
-      "descricao": "Artigo publicado em revista de divulgação científica juvenil com metodologia de astrolábio analógico.",
-      "ano": "2022"
-    },
-    {
-      "icone": "🚀",
-      "titulo": "Projeto Destaque NASA",
-      "descricao": "Menção honrosa em programa de estímulo à astronomia para jovens com apoio de instituições americanas.",
-      "ano": "2023"
-    }
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
   ]
 }
