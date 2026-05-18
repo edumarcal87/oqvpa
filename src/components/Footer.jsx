@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <a className="footer-logo" href="#">
-          <img src={`${BASE}images/logo.jpg`} alt="O Que Vem Por Aí" />
+          <img src={`${BASE}images/logo.png`} alt="O Que Vem Por Aí" />
         </a>
         <ul className="footer-links">
           {data.instagramLink && (

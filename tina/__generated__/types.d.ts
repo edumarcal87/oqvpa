@@ -98,6 +98,10 @@ export type Query = {
   quizConnection: QuizConnection;
   livro: Livro;
   livroConnection: LivroConnection;
+  cursos: Cursos;
+  cursosConnection: CursosConnection;
+  engajamento: Engajamento;
+  engajamentoConnection: EngajamentoConnection;
   footer: Footer;
   footerConnection: FooterConnection;
 };
@@ -244,6 +248,36 @@ export type QueryLivroConnectionArgs = {
 };
 
 
+export type QueryCursosArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryCursosConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<CursosFilter>;
+};
+
+
+export type QueryEngajamentoArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryEngajamentoConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<EngajamentoFilter>;
+};
+
+
 export type QueryFooterArgs = {
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
@@ -267,6 +301,8 @@ export type DocumentFilter = {
   videos?: InputMaybe<VideosFilter>;
   quiz?: InputMaybe<QuizFilter>;
   livro?: InputMaybe<LivroFilter>;
+  cursos?: InputMaybe<CursosFilter>;
+  engajamento?: InputMaybe<EngajamentoFilter>;
   footer?: InputMaybe<FooterFilter>;
 };
 
@@ -307,7 +343,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Hero | Sobre | Premios | Projetos | Galeria | Videos | Quiz | Livro | Footer | Folder;
+export type DocumentNode = Hero | Sobre | Premios | Projetos | Galeria | Videos | Quiz | Livro | Cursos | Engajamento | Footer | Folder;
 
 export type Hero = Node & Document & {
   __typename?: 'Hero';
@@ -642,6 +678,106 @@ export type LivroConnection = Connection & {
   edges?: Maybe<Array<Maybe<LivroConnectionEdges>>>;
 };
 
+export type CursosLista = {
+  __typename?: 'CursosLista';
+  icone?: Maybe<Scalars['String']['output']>;
+  titulo?: Maybe<Scalars['String']['output']>;
+  instituicao?: Maybe<Scalars['String']['output']>;
+  ano?: Maybe<Scalars['String']['output']>;
+  descricao?: Maybe<Scalars['String']['output']>;
+  link?: Maybe<Scalars['String']['output']>;
+};
+
+export type Cursos = Node & Document & {
+  __typename?: 'Cursos';
+  titulo?: Maybe<Scalars['String']['output']>;
+  subtitulo?: Maybe<Scalars['String']['output']>;
+  descricao?: Maybe<Scalars['String']['output']>;
+  lista?: Maybe<Array<Maybe<CursosLista>>>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type CursosListaFilter = {
+  icone?: InputMaybe<StringFilter>;
+  titulo?: InputMaybe<StringFilter>;
+  instituicao?: InputMaybe<StringFilter>;
+  ano?: InputMaybe<StringFilter>;
+  descricao?: InputMaybe<StringFilter>;
+  link?: InputMaybe<StringFilter>;
+};
+
+export type CursosFilter = {
+  titulo?: InputMaybe<StringFilter>;
+  subtitulo?: InputMaybe<StringFilter>;
+  descricao?: InputMaybe<StringFilter>;
+  lista?: InputMaybe<CursosListaFilter>;
+};
+
+export type CursosConnectionEdges = {
+  __typename?: 'CursosConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Cursos>;
+};
+
+export type CursosConnection = Connection & {
+  __typename?: 'CursosConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<CursosConnectionEdges>>>;
+};
+
+export type EngajamentoLista = {
+  __typename?: 'EngajamentoLista';
+  icone?: Maybe<Scalars['String']['output']>;
+  titulo?: Maybe<Scalars['String']['output']>;
+  organizacao?: Maybe<Scalars['String']['output']>;
+  ano?: Maybe<Scalars['String']['output']>;
+  descricao?: Maybe<Scalars['String']['output']>;
+  link?: Maybe<Scalars['String']['output']>;
+};
+
+export type Engajamento = Node & Document & {
+  __typename?: 'Engajamento';
+  titulo?: Maybe<Scalars['String']['output']>;
+  subtitulo?: Maybe<Scalars['String']['output']>;
+  descricao?: Maybe<Scalars['String']['output']>;
+  lista?: Maybe<Array<Maybe<EngajamentoLista>>>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type EngajamentoListaFilter = {
+  icone?: InputMaybe<StringFilter>;
+  titulo?: InputMaybe<StringFilter>;
+  organizacao?: InputMaybe<StringFilter>;
+  ano?: InputMaybe<StringFilter>;
+  descricao?: InputMaybe<StringFilter>;
+  link?: InputMaybe<StringFilter>;
+};
+
+export type EngajamentoFilter = {
+  titulo?: InputMaybe<StringFilter>;
+  subtitulo?: InputMaybe<StringFilter>;
+  descricao?: InputMaybe<StringFilter>;
+  lista?: InputMaybe<EngajamentoListaFilter>;
+};
+
+export type EngajamentoConnectionEdges = {
+  __typename?: 'EngajamentoConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Engajamento>;
+};
+
+export type EngajamentoConnection = Connection & {
+  __typename?: 'EngajamentoConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<EngajamentoConnectionEdges>>>;
+};
+
 export type Footer = Node & Document & {
   __typename?: 'Footer';
   instagramLink?: Maybe<Scalars['String']['output']>;
@@ -700,6 +836,10 @@ export type Mutation = {
   createQuiz: Quiz;
   updateLivro: Livro;
   createLivro: Livro;
+  updateCursos: Cursos;
+  createCursos: Cursos;
+  updateEngajamento: Engajamento;
+  createEngajamento: Engajamento;
   updateFooter: Footer;
   createFooter: Footer;
 };
@@ -834,6 +974,30 @@ export type MutationCreateLivroArgs = {
 };
 
 
+export type MutationUpdateCursosArgs = {
+  relativePath: Scalars['String']['input'];
+  params: CursosMutation;
+};
+
+
+export type MutationCreateCursosArgs = {
+  relativePath: Scalars['String']['input'];
+  params: CursosMutation;
+};
+
+
+export type MutationUpdateEngajamentoArgs = {
+  relativePath: Scalars['String']['input'];
+  params: EngajamentoMutation;
+};
+
+
+export type MutationCreateEngajamentoArgs = {
+  relativePath: Scalars['String']['input'];
+  params: EngajamentoMutation;
+};
+
+
 export type MutationUpdateFooterArgs = {
   relativePath: Scalars['String']['input'];
   params: FooterMutation;
@@ -854,6 +1018,8 @@ export type DocumentUpdateMutation = {
   videos?: InputMaybe<VideosMutation>;
   quiz?: InputMaybe<QuizMutation>;
   livro?: InputMaybe<LivroMutation>;
+  cursos?: InputMaybe<CursosMutation>;
+  engajamento?: InputMaybe<EngajamentoMutation>;
   footer?: InputMaybe<FooterMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
@@ -867,6 +1033,8 @@ export type DocumentMutation = {
   videos?: InputMaybe<VideosMutation>;
   quiz?: InputMaybe<QuizMutation>;
   livro?: InputMaybe<LivroMutation>;
+  cursos?: InputMaybe<CursosMutation>;
+  engajamento?: InputMaybe<EngajamentoMutation>;
   footer?: InputMaybe<FooterMutation>;
 };
 
@@ -959,6 +1127,38 @@ export type LivroMutation = {
   btn2Link?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type CursosListaMutation = {
+  icone?: InputMaybe<Scalars['String']['input']>;
+  titulo?: InputMaybe<Scalars['String']['input']>;
+  instituicao?: InputMaybe<Scalars['String']['input']>;
+  ano?: InputMaybe<Scalars['String']['input']>;
+  descricao?: InputMaybe<Scalars['String']['input']>;
+  link?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type CursosMutation = {
+  titulo?: InputMaybe<Scalars['String']['input']>;
+  subtitulo?: InputMaybe<Scalars['String']['input']>;
+  descricao?: InputMaybe<Scalars['String']['input']>;
+  lista?: InputMaybe<Array<InputMaybe<CursosListaMutation>>>;
+};
+
+export type EngajamentoListaMutation = {
+  icone?: InputMaybe<Scalars['String']['input']>;
+  titulo?: InputMaybe<Scalars['String']['input']>;
+  organizacao?: InputMaybe<Scalars['String']['input']>;
+  ano?: InputMaybe<Scalars['String']['input']>;
+  descricao?: InputMaybe<Scalars['String']['input']>;
+  link?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type EngajamentoMutation = {
+  titulo?: InputMaybe<Scalars['String']['input']>;
+  subtitulo?: InputMaybe<Scalars['String']['input']>;
+  descricao?: InputMaybe<Scalars['String']['input']>;
+  lista?: InputMaybe<Array<InputMaybe<EngajamentoListaMutation>>>;
+};
+
 export type FooterMutation = {
   instagramLink?: InputMaybe<Scalars['String']['input']>;
   youtubeLink?: InputMaybe<Scalars['String']['input']>;
@@ -983,6 +1183,10 @@ export type VideosPartsFragment = { __typename: 'Videos', lista?: Array<{ __type
 export type QuizPartsFragment = { __typename: 'Quiz', titulo?: string | null, descricao?: string | null, btnTexto?: string | null, btnLink?: string | null, opcoes?: Array<{ __typename: 'QuizOpcoes', texto?: string | null } | null> | null };
 
 export type LivroPartsFragment = { __typename: 'Livro', titulo?: string | null, paragrafo1?: string | null, paragrafo2?: string | null, btn1Texto?: string | null, btn1Link?: string | null, btn2Texto?: string | null, btn2Link?: string | null };
+
+export type CursosPartsFragment = { __typename: 'Cursos', titulo?: string | null, subtitulo?: string | null, descricao?: string | null, lista?: Array<{ __typename: 'CursosLista', icone?: string | null, titulo?: string | null, instituicao?: string | null, ano?: string | null, descricao?: string | null, link?: string | null } | null> | null };
+
+export type EngajamentoPartsFragment = { __typename: 'Engajamento', titulo?: string | null, subtitulo?: string | null, descricao?: string | null, lista?: Array<{ __typename: 'EngajamentoLista', icone?: string | null, titulo?: string | null, organizacao?: string | null, ano?: string | null, descricao?: string | null, link?: string | null } | null> | null };
 
 export type FooterPartsFragment = { __typename: 'Footer', instagramLink?: string | null, youtubeLink?: string | null, contatoEmail?: string | null, lattesLink?: string | null, portfolioLink?: string | null, copyright?: string | null };
 
@@ -1138,6 +1342,44 @@ export type LivroConnectionQueryVariables = Exact<{
 
 export type LivroConnectionQuery = { __typename?: 'Query', livroConnection: { __typename?: 'LivroConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'LivroConnectionEdges', cursor: string, node?: { __typename: 'Livro', id: string, titulo?: string | null, paragrafo1?: string | null, paragrafo2?: string | null, btn1Texto?: string | null, btn1Link?: string | null, btn2Texto?: string | null, btn2Link?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
+export type CursosQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type CursosQuery = { __typename?: 'Query', cursos: { __typename: 'Cursos', id: string, titulo?: string | null, subtitulo?: string | null, descricao?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, lista?: Array<{ __typename: 'CursosLista', icone?: string | null, titulo?: string | null, instituicao?: string | null, ano?: string | null, descricao?: string | null, link?: string | null } | null> | null } };
+
+export type CursosConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<CursosFilter>;
+}>;
+
+
+export type CursosConnectionQuery = { __typename?: 'Query', cursosConnection: { __typename?: 'CursosConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'CursosConnectionEdges', cursor: string, node?: { __typename: 'Cursos', id: string, titulo?: string | null, subtitulo?: string | null, descricao?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, lista?: Array<{ __typename: 'CursosLista', icone?: string | null, titulo?: string | null, instituicao?: string | null, ano?: string | null, descricao?: string | null, link?: string | null } | null> | null } | null } | null> | null } };
+
+export type EngajamentoQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type EngajamentoQuery = { __typename?: 'Query', engajamento: { __typename: 'Engajamento', id: string, titulo?: string | null, subtitulo?: string | null, descricao?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, lista?: Array<{ __typename: 'EngajamentoLista', icone?: string | null, titulo?: string | null, organizacao?: string | null, ano?: string | null, descricao?: string | null, link?: string | null } | null> | null } };
+
+export type EngajamentoConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<EngajamentoFilter>;
+}>;
+
+
+export type EngajamentoConnectionQuery = { __typename?: 'Query', engajamentoConnection: { __typename?: 'EngajamentoConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'EngajamentoConnectionEdges', cursor: string, node?: { __typename: 'Engajamento', id: string, titulo?: string | null, subtitulo?: string | null, descricao?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, lista?: Array<{ __typename: 'EngajamentoLista', icone?: string | null, titulo?: string | null, organizacao?: string | null, ano?: string | null, descricao?: string | null, link?: string | null } | null> | null } | null } | null> | null } };
+
 export type FooterQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
@@ -1255,6 +1497,40 @@ export const LivroPartsFragmentDoc = gql`
   btn1Link
   btn2Texto
   btn2Link
+}
+    `;
+export const CursosPartsFragmentDoc = gql`
+    fragment CursosParts on Cursos {
+  __typename
+  titulo
+  subtitulo
+  descricao
+  lista {
+    __typename
+    icone
+    titulo
+    instituicao
+    ano
+    descricao
+    link
+  }
+}
+    `;
+export const EngajamentoPartsFragmentDoc = gql`
+    fragment EngajamentoParts on Engajamento {
+  __typename
+  titulo
+  subtitulo
+  descricao
+  lista {
+    __typename
+    icone
+    titulo
+    organizacao
+    ano
+    descricao
+    link
+  }
 }
     `;
 export const FooterPartsFragmentDoc = gql`
@@ -1724,6 +2000,120 @@ export const LivroConnectionDocument = gql`
   }
 }
     ${LivroPartsFragmentDoc}`;
+export const CursosDocument = gql`
+    query cursos($relativePath: String!) {
+  cursos(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...CursosParts
+  }
+}
+    ${CursosPartsFragmentDoc}`;
+export const CursosConnectionDocument = gql`
+    query cursosConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: CursosFilter) {
+  cursosConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...CursosParts
+      }
+    }
+  }
+}
+    ${CursosPartsFragmentDoc}`;
+export const EngajamentoDocument = gql`
+    query engajamento($relativePath: String!) {
+  engajamento(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...EngajamentoParts
+  }
+}
+    ${EngajamentoPartsFragmentDoc}`;
+export const EngajamentoConnectionDocument = gql`
+    query engajamentoConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: EngajamentoFilter) {
+  engajamentoConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...EngajamentoParts
+      }
+    }
+  }
+}
+    ${EngajamentoPartsFragmentDoc}`;
 export const FooterDocument = gql`
     query footer($relativePath: String!) {
   footer(relativePath: $relativePath) {
@@ -1831,6 +2221,18 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     livroConnection(variables?: LivroConnectionQueryVariables, options?: C): Promise<{data: LivroConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: LivroConnectionQueryVariables, query: string}> {
         return requester<{data: LivroConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: LivroConnectionQueryVariables, query: string}, LivroConnectionQueryVariables>(LivroConnectionDocument, variables, options);
+      },
+    cursos(variables: CursosQueryVariables, options?: C): Promise<{data: CursosQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: CursosQueryVariables, query: string}> {
+        return requester<{data: CursosQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: CursosQueryVariables, query: string}, CursosQueryVariables>(CursosDocument, variables, options);
+      },
+    cursosConnection(variables?: CursosConnectionQueryVariables, options?: C): Promise<{data: CursosConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: CursosConnectionQueryVariables, query: string}> {
+        return requester<{data: CursosConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: CursosConnectionQueryVariables, query: string}, CursosConnectionQueryVariables>(CursosConnectionDocument, variables, options);
+      },
+    engajamento(variables: EngajamentoQueryVariables, options?: C): Promise<{data: EngajamentoQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: EngajamentoQueryVariables, query: string}> {
+        return requester<{data: EngajamentoQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: EngajamentoQueryVariables, query: string}, EngajamentoQueryVariables>(EngajamentoDocument, variables, options);
+      },
+    engajamentoConnection(variables?: EngajamentoConnectionQueryVariables, options?: C): Promise<{data: EngajamentoConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: EngajamentoConnectionQueryVariables, query: string}> {
+        return requester<{data: EngajamentoConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: EngajamentoConnectionQueryVariables, query: string}, EngajamentoConnectionQueryVariables>(EngajamentoConnectionDocument, variables, options);
       },
     footer(variables: FooterQueryVariables, options?: C): Promise<{data: FooterQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: FooterQueryVariables, query: string}> {
         return requester<{data: FooterQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: FooterQueryVariables, query: string}, FooterQueryVariables>(FooterDocument, variables, options);

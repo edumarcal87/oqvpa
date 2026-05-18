@@ -254,6 +254,84 @@ var config_default = defineConfig({
           { type: "string", name: "btn2Link", label: "Bot\xE3o 2 \u2014 Link" }
         ]
       },
+      // ── CURSOS ────────────────────────────────────
+      {
+        name: "cursos",
+        label: "Cursos",
+        path: "content",
+        match: { include: "cursos" },
+        format: "json",
+        ui: { allowedActions: { create: false, delete: false } },
+        fields: [
+          { type: "string", name: "titulo", label: "T\xEDtulo da se\xE7\xE3o" },
+          { type: "string", name: "subtitulo", label: "Subt\xEDtulo" },
+          {
+            type: "string",
+            name: "descricao",
+            label: "Descri\xE7\xE3o da se\xE7\xE3o",
+            ui: { component: "textarea" }
+          },
+          {
+            type: "object",
+            name: "lista",
+            label: "Lista de Cursos",
+            list: true,
+            ui: { itemProps: (item) => ({ label: item?.titulo || "Curso" }) },
+            fields: [
+              { type: "string", name: "icone", label: "\xCDcone (emoji)" },
+              { type: "string", name: "titulo", label: "Nome do curso" },
+              { type: "string", name: "instituicao", label: "Institui\xE7\xE3o" },
+              { type: "string", name: "ano", label: "Ano" },
+              {
+                type: "string",
+                name: "descricao",
+                label: "Descri\xE7\xE3o",
+                ui: { component: "textarea" }
+              },
+              { type: "string", name: "link", label: "Link (opcional)" }
+            ]
+          }
+        ]
+      },
+      // ── ENGAJAMENTO ───────────────────────────────
+      {
+        name: "engajamento",
+        label: "Engajamento Cient\xEDfico",
+        path: "content",
+        match: { include: "engajamento" },
+        format: "json",
+        ui: { allowedActions: { create: false, delete: false } },
+        fields: [
+          { type: "string", name: "titulo", label: "T\xEDtulo da se\xE7\xE3o" },
+          { type: "string", name: "subtitulo", label: "Subt\xEDtulo" },
+          {
+            type: "string",
+            name: "descricao",
+            label: "Descri\xE7\xE3o da se\xE7\xE3o",
+            ui: { component: "textarea" }
+          },
+          {
+            type: "object",
+            name: "lista",
+            label: "Lista de Engajamentos",
+            list: true,
+            ui: { itemProps: (item) => ({ label: item?.titulo || "Engajamento" }) },
+            fields: [
+              { type: "string", name: "icone", label: "\xCDcone (emoji)" },
+              { type: "string", name: "titulo", label: "Nome do clube / iniciativa" },
+              { type: "string", name: "organizacao", label: "Organiza\xE7\xE3o" },
+              { type: "string", name: "ano", label: "Ano" },
+              {
+                type: "string",
+                name: "descricao",
+                label: "Descri\xE7\xE3o",
+                ui: { component: "textarea" }
+              },
+              { type: "string", name: "link", label: "Link (opcional)" }
+            ]
+          }
+        ]
+      },
       // ── FOOTER ────────────────────────────────
       {
         name: "footer",

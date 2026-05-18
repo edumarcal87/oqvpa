@@ -90,6 +90,38 @@ fragment LivroParts on Livro {
   btn2Link
 }
 
+fragment CursosParts on Cursos {
+  __typename
+  titulo
+  subtitulo
+  descricao
+  lista {
+    __typename
+    icone
+    titulo
+    instituicao
+    ano
+    descricao
+    link
+  }
+}
+
+fragment EngajamentoParts on Engajamento {
+  __typename
+  titulo
+  subtitulo
+  descricao
+  lista {
+    __typename
+    icone
+    titulo
+    organizacao
+    ano
+    descricao
+    link
+  }
+}
+
 fragment FooterParts on Footer {
   __typename
   instagramLink

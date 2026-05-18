@@ -3,6 +3,8 @@ import Hero from './components/Hero'
 import Sobre from './components/Sobre'
 import Premios from './components/Premios'
 import Projetos from './components/Projetos'
+import Cursos from './components/Cursos'
+import Engajamento from './components/Engajamento'
 import Galeria from './components/Galeria'
 import Videos from './components/Videos'
 import Quiz from './components/Quiz'
@@ -21,6 +23,10 @@ function App() {
       <Premios />
       <div className="divider" />
       <Projetos />
+      <div className="divider" />
+      <Cursos />
+      <div className="divider" />
+      <Engajamento />
       <div className="divider" />
       <Galeria />
       <div className="divider" />

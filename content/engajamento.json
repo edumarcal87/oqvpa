@@ -1,0 +1,15 @@
+{
+  "titulo": "Engajamento Científico",
+  "subtitulo": "Clubes de STEAM e Astronomia",
+  "descricao": "Participação ativa em clubes, grupos e iniciativas de divulgação científica.",
+  "lista": [
+    {
+      "icone": "🌌",
+      "titulo": "Clube de Astronomia",
+      "organizacao": "Nome da Organização",
+      "ano": "2024",
+      "descricao": "Descrição da participação no clube.",
+      "link": ""
+    }
+  ]
+}

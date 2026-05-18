@@ -105,6 +105,40 @@ export const LivroPartsFragmentDoc = gql`
   btn2Link
 }
     `;
+export const CursosPartsFragmentDoc = gql`
+    fragment CursosParts on Cursos {
+  __typename
+  titulo
+  subtitulo
+  descricao
+  lista {
+    __typename
+    icone
+    titulo
+    instituicao
+    ano
+    descricao
+    link
+  }
+}
+    `;
+export const EngajamentoPartsFragmentDoc = gql`
+    fragment EngajamentoParts on Engajamento {
+  __typename
+  titulo
+  subtitulo
+  descricao
+  lista {
+    __typename
+    icone
+    titulo
+    organizacao
+    ano
+    descricao
+    link
+  }
+}
+    `;
 export const FooterPartsFragmentDoc = gql`
     fragment FooterParts on Footer {
   __typename
@@ -572,6 +606,120 @@ export const LivroConnectionDocument = gql`
   }
 }
     ${LivroPartsFragmentDoc}`;
+export const CursosDocument = gql`
+    query cursos($relativePath: String!) {
+  cursos(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...CursosParts
+  }
+}
+    ${CursosPartsFragmentDoc}`;
+export const CursosConnectionDocument = gql`
+    query cursosConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: CursosFilter) {
+  cursosConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...CursosParts
+      }
+    }
+  }
+}
+    ${CursosPartsFragmentDoc}`;
+export const EngajamentoDocument = gql`
+    query engajamento($relativePath: String!) {
+  engajamento(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...EngajamentoParts
+  }
+}
+    ${EngajamentoPartsFragmentDoc}`;
+export const EngajamentoConnectionDocument = gql`
+    query engajamentoConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: EngajamentoFilter) {
+  engajamentoConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...EngajamentoParts
+      }
+    }
+  }
+}
+    ${EngajamentoPartsFragmentDoc}`;
 export const FooterDocument = gql`
     query footer($relativePath: String!) {
   footer(relativePath: $relativePath) {
@@ -678,6 +826,18 @@ export function getSdk(requester) {
     },
     livroConnection(variables, options) {
       return requester(LivroConnectionDocument, variables, options);
+    },
+    cursos(variables, options) {
+      return requester(CursosDocument, variables, options);
+    },
+    cursosConnection(variables, options) {
+      return requester(CursosConnectionDocument, variables, options);
+    },
+    engajamento(variables, options) {
+      return requester(EngajamentoDocument, variables, options);
+    },
+    engajamentoConnection(variables, options) {
+      return requester(EngajamentoConnectionDocument, variables, options);
     },
     footer(variables, options) {
       return requester(FooterDocument, variables, options);

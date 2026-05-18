@@ -16,6 +16,8 @@ export default function Nav() {
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#premios">Prêmios</a></li>
           <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#engajamento">Engajamento</a></li>
           <li><a href="#galeria">Galeria</a></li>
           <li><a href="#videos">Vídeos</a></li>
           <li><a href="#livro">Livro</a></li>

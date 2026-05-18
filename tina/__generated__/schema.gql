@@ -70,6 +70,10 @@ type Query {
   quizConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: QuizFilter): QuizConnection!
   livro(relativePath: String): Livro!
   livroConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: LivroFilter): LivroConnection!
+  cursos(relativePath: String): Cursos!
+  cursosConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: CursosFilter): CursosConnection!
+  engajamento(relativePath: String): Engajamento!
+  engajamentoConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: EngajamentoFilter): EngajamentoConnection!
   footer(relativePath: String): Footer!
   footerConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: FooterFilter): FooterConnection!
 }
@@ -83,6 +87,8 @@ input DocumentFilter {
   videos: VideosFilter
   quiz: QuizFilter
   livro: LivroFilter
+  cursos: CursosFilter
+  engajamento: EngajamentoFilter
   footer: FooterFilter
 }
 
@@ -109,7 +115,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Hero | Sobre | Premios | Projetos | Galeria | Videos | Quiz | Livro | Footer | Folder
+union DocumentNode = Hero | Sobre | Premios | Projetos | Galeria | Videos | Quiz | Livro | Cursos | Engajamento | Footer | Folder
 
 type Hero implements Node & Document {
   tag: String
@@ -415,6 +421,98 @@ type LivroConnection implements Connection {
   edges: [LivroConnectionEdges]
 }
 
+type CursosLista {
+  icone: String
+  titulo: String
+  instituicao: String
+  ano: String
+  descricao: String
+  link: String
+}
+
+type Cursos implements Node & Document {
+  titulo: String
+  subtitulo: String
+  descricao: String
+  lista: [CursosLista]
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input CursosListaFilter {
+  icone: StringFilter
+  titulo: StringFilter
+  instituicao: StringFilter
+  ano: StringFilter
+  descricao: StringFilter
+  link: StringFilter
+}
+
+input CursosFilter {
+  titulo: StringFilter
+  subtitulo: StringFilter
+  descricao: StringFilter
+  lista: CursosListaFilter
+}
+
+type CursosConnectionEdges {
+  cursor: String!
+  node: Cursos
+}
+
+type CursosConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [CursosConnectionEdges]
+}
+
+type EngajamentoLista {
+  icone: String
+  titulo: String
+  organizacao: String
+  ano: String
+  descricao: String
+  link: String
+}
+
+type Engajamento implements Node & Document {
+  titulo: String
+  subtitulo: String
+  descricao: String
+  lista: [EngajamentoLista]
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input EngajamentoListaFilter {
+  icone: StringFilter
+  titulo: StringFilter
+  organizacao: StringFilter
+  ano: StringFilter
+  descricao: StringFilter
+  link: StringFilter
+}
+
+input EngajamentoFilter {
+  titulo: StringFilter
+  subtitulo: StringFilter
+  descricao: StringFilter
+  lista: EngajamentoListaFilter
+}
+
+type EngajamentoConnectionEdges {
+  cursor: String!
+  node: Engajamento
+}
+
+type EngajamentoConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [EngajamentoConnectionEdges]
+}
+
 type Footer implements Node & Document {
   instagramLink: String
   youtubeLink: String
@@ -469,6 +567,10 @@ type Mutation {
   createQuiz(relativePath: String!, params: QuizMutation!): Quiz!
   updateLivro(relativePath: String!, params: LivroMutation!): Livro!
   createLivro(relativePath: String!, params: LivroMutation!): Livro!
+  updateCursos(relativePath: String!, params: CursosMutation!): Cursos!
+  createCursos(relativePath: String!, params: CursosMutation!): Cursos!
+  updateEngajamento(relativePath: String!, params: EngajamentoMutation!): Engajamento!
+  createEngajamento(relativePath: String!, params: EngajamentoMutation!): Engajamento!
   updateFooter(relativePath: String!, params: FooterMutation!): Footer!
   createFooter(relativePath: String!, params: FooterMutation!): Footer!
 }
@@ -482,6 +584,8 @@ input DocumentUpdateMutation {
   videos: VideosMutation
   quiz: QuizMutation
   livro: LivroMutation
+  cursos: CursosMutation
+  engajamento: EngajamentoMutation
   footer: FooterMutation
   relativePath: String
 }
@@ -495,6 +599,8 @@ input DocumentMutation {
   videos: VideosMutation
   quiz: QuizMutation
   livro: LivroMutation
+  cursos: CursosMutation
+  engajamento: EngajamentoMutation
   footer: FooterMutation
 }
 
@@ -585,6 +691,38 @@ input LivroMutation {
   btn1Link: String
   btn2Texto: String
   btn2Link: String
+}
+
+input CursosListaMutation {
+  icone: String
+  titulo: String
+  instituicao: String
+  ano: String
+  descricao: String
+  link: String
+}
+
+input CursosMutation {
+  titulo: String
+  subtitulo: String
+  descricao: String
+  lista: [CursosListaMutation]
+}
+
+input EngajamentoListaMutation {
+  icone: String
+  titulo: String
+  organizacao: String
+  ano: String
+  descricao: String
+  link: String
+}
+
+input EngajamentoMutation {
+  titulo: String
+  subtitulo: String
+  descricao: String
+  lista: [EngajamentoListaMutation]
 }
 
 input FooterMutation {

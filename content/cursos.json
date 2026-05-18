@@ -1,0 +1,15 @@
+{
+  "titulo": "Cursos",
+  "subtitulo": "Formação e aprendizado contínuo",
+  "descricao": "Cursos realizados por Bernardo em diversas áreas do conhecimento científico e tecnológico.",
+  "lista": [
+    {
+      "icone": "🔭",
+      "titulo": "Astronomia para Jovens",
+      "instituicao": "Nome da Instituição",
+      "ano": "2024",
+      "descricao": "Descrição do curso realizado.",
+      "link": ""
+    }
+  ]
+}
