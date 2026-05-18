@@ -210,7 +210,12 @@
       "descricao": "Destaque na Olimpíada de Biologia do MEDALHEI, explorando os mistérios da vida e dos ecossistemas.",
       "ano": "2024"
     },
-    {},
+    {
+      "icone": "🥈",
+      "titulo": " Prata OBA",
+      "descricao": "Prata na Olimpíada Brasileira de Astronomia e Astronáutica, uma das competições científicas mais tradicionais do país.",
+      "ano": "2024"
+    },
     {},
     {},
     {},
