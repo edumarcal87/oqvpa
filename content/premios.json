@@ -54,7 +54,12 @@
       "descricao": "Menção Honrosa na Olimpíada Nacional de Ciências, destacando-se entre os melhores jovens cientistas do país.",
       "ano": "2025"
     },
-    {},
+    {
+      "icone": "🥉",
+      "titulo": "Bronze OASTRA Astronomia",
+      "descricao": "Bronze na Olimpíada de Astronomia da LIASTRA, aprofundando o conhecimento sobre estrelas e galáxias.",
+      "ano": "2025"
+    },
     {},
     {},
     {},
