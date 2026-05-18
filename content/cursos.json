@@ -75,7 +75,12 @@
       "ano": "2023",
       "descricao": "15 horas "
     },
-    {},
+    {
+      "titulo": "Um voo pelo universo dos Foguetes: teoria e prática",
+      "instituicao": "AEB ",
+      "ano": "2023",
+      "descricao": "20 horas"
+    },
     {}
   ]
 }
