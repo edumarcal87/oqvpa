@@ -101,6 +101,12 @@
       "titulo": " Bronze OBRL",
       "descricao": "Medalha de bronze na Olimpíada Brasileira de Raciocínio Lógico, destacando o pensamento analítico e estratégico.",
       "ano": "2025"
+    },
+    {
+      "icone": "🥉",
+      "titulo": "Bronze SMC",
+      "descricao": "Bronze na Singapore Mathematics Challenge, competição internacional de matemática com participantes de dezenas de países.",
+      "ano": "2025"
     }
   ]
 }
