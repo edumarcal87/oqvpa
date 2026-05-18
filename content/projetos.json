@@ -62,6 +62,13 @@
       "descricao": "MISSÃO ESPACIAL VIRTUAL ANÁLOGA n. 194 do Habitat Marte - 2024",
       "badge": "Reconhecimento",
       "link": "#"
+    },
+    {
+      "numero": "10",
+      "titulo": "Supernova SN2025ifq",
+      "descricao": "Descoberta da supernova SN2025ifq através do Projeto Kilonova Seekers",
+      "badge": "Reconhecimento",
+      "link": "https://goto- obs.github.io/knseekers-results/discovery/2025/05/08/GOTO24jvr.html"
     }
   ]
 }
