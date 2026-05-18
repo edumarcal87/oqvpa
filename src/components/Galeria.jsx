@@ -1,8 +1,17 @@
 import { useContent } from '../hooks/useContent'
 
+const BASE = import.meta.env.BASE_URL
+
 export default function Galeria() {
   const { data, loading } = useContent('galeria')
   if (loading || !data) return null
+
+  // Remove a barra inicial do src para evitar duplicação com BASE_URL
+  const resolveUrl = (src) => {
+    if (!src) return null
+    const clean = src.startsWith('/') ? src.slice(1) : src
+    return `${BASE}${clean}`
+  }
 
   return (
     <section className="galeria" id="galeria">
@@ -15,7 +24,7 @@ export default function Galeria() {
         {data.itens.map((item, i) => (
           <div className="g-item" key={i}>
             {item.src
-              ? <img src={item.src} alt={item.alt} />
+              ? <img src={resolveUrl(item.src)} alt={item.alt || `Quadro ${i + 1}`} />
               : <span style={{ fontSize: '2rem' }}>🌌</span>
             }
           </div>
