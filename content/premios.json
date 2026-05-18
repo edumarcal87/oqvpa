@@ -246,7 +246,12 @@
       "descricao": " Medalha de bronze na competição internacional de ciências, representando o Brasil entre jovens cientistas do mundo todo.",
       "ano": "2026"
     },
-    {},
+    {
+      "icone": "🥉",
+      "titulo": "Bronze EUREKA",
+      "descricao": " Reconhecimento na Olimpíada de Tecnologia do MEDALHEI, demonstrando habilidade e criatividade na resolução de desafios tecnológicos.",
+      "ano": "2026"
+    },
     {},
     {},
     {}
