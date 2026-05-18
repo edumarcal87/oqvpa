@@ -218,6 +218,116 @@ query projetosConnection($before: String, $after: String, $first: Float, $last: 
   }
 }
 
+query cursos($relativePath: String!) {
+  cursos(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...CursosParts
+  }
+}
+
+query cursosConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: CursosFilter) {
+  cursosConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...CursosParts
+      }
+    }
+  }
+}
+
+query engajamento($relativePath: String!) {
+  engajamento(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...EngajamentoParts
+  }
+}
+
+query engajamentoConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: EngajamentoFilter) {
+  engajamentoConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...EngajamentoParts
+      }
+    }
+  }
+}
+
 query galeria($relativePath: String!) {
   galeria(relativePath: $relativePath) {
     ... on Document {
@@ -433,116 +543,6 @@ query livroConnection($before: String, $after: String, $first: Float, $last: Flo
           id
         }
         ...LivroParts
-      }
-    }
-  }
-}
-
-query cursos($relativePath: String!) {
-  cursos(relativePath: $relativePath) {
-    ... on Document {
-      _sys {
-        filename
-        basename
-        hasReferences
-        breadcrumbs
-        path
-        relativePath
-        extension
-      }
-      id
-    }
-    ...CursosParts
-  }
-}
-
-query cursosConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: CursosFilter) {
-  cursosConnection(
-    before: $before
-    after: $after
-    first: $first
-    last: $last
-    sort: $sort
-    filter: $filter
-  ) {
-    pageInfo {
-      hasPreviousPage
-      hasNextPage
-      startCursor
-      endCursor
-    }
-    totalCount
-    edges {
-      cursor
-      node {
-        ... on Document {
-          _sys {
-            filename
-            basename
-            hasReferences
-            breadcrumbs
-            path
-            relativePath
-            extension
-          }
-          id
-        }
-        ...CursosParts
-      }
-    }
-  }
-}
-
-query engajamento($relativePath: String!) {
-  engajamento(relativePath: $relativePath) {
-    ... on Document {
-      _sys {
-        filename
-        basename
-        hasReferences
-        breadcrumbs
-        path
-        relativePath
-        extension
-      }
-      id
-    }
-    ...EngajamentoParts
-  }
-}
-
-query engajamentoConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: EngajamentoFilter) {
-  engajamentoConnection(
-    before: $before
-    after: $after
-    first: $first
-    last: $last
-    sort: $sort
-    filter: $filter
-  ) {
-    pageInfo {
-      hasPreviousPage
-      hasNextPage
-      startCursor
-      endCursor
-    }
-    totalCount
-    edges {
-      cursor
-      node {
-        ... on Document {
-          _sys {
-            filename
-            basename
-            hasReferences
-            breadcrumbs
-            path
-            relativePath
-            extension
-          }
-          id
-        }
-        ...EngajamentoParts
       }
     }
   }

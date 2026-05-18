@@ -248,6 +248,8 @@ export default defineConfig({
       },
 
       // ── LIVRO ─────────────────────────────────
+      // IMPORTANTE: btn2Texto e btn2Link foram mantidos para não quebrar o schema do Tina Cloud
+      // O componente Livro.jsx usa apenas btn1Texto e btn1Link
       {
         name: "livro",
         label: "Livro",
@@ -261,6 +263,8 @@ export default defineConfig({
           { type: "string", name: "paragrafo2", label: "Parágrafo 2", ui: { component: "textarea" } },
           { type: "string", name: "btn1Texto", label: "Botão — Texto" },
           { type: "string", name: "btn1Link", label: "Botão — Link" },
+          { type: "string", name: "btn2Texto", label: "Botão 2 — Texto (não utilizado)" },
+          { type: "string", name: "btn2Link", label: "Botão 2 — Link (não utilizado)" },
         ],
       },
 

@@ -47,6 +47,38 @@ fragment ProjetosParts on Projetos {
   }
 }
 
+fragment CursosParts on Cursos {
+  __typename
+  titulo
+  subtitulo
+  descricao
+  lista {
+    __typename
+    icone
+    titulo
+    instituicao
+    ano
+    descricao
+    link
+  }
+}
+
+fragment EngajamentoParts on Engajamento {
+  __typename
+  titulo
+  subtitulo
+  descricao
+  lista {
+    __typename
+    icone
+    titulo
+    organizacao
+    ano
+    descricao
+    link
+  }
+}
+
 fragment GaleriaParts on Galeria {
   __typename
   itens {
@@ -88,38 +120,6 @@ fragment LivroParts on Livro {
   btn1Link
   btn2Texto
   btn2Link
-}
-
-fragment CursosParts on Cursos {
-  __typename
-  titulo
-  subtitulo
-  descricao
-  lista {
-    __typename
-    icone
-    titulo
-    instituicao
-    ano
-    descricao
-    link
-  }
-}
-
-fragment EngajamentoParts on Engajamento {
-  __typename
-  titulo
-  subtitulo
-  descricao
-  lista {
-    __typename
-    icone
-    titulo
-    organizacao
-    ano
-    descricao
-    link
-  }
 }
 
 fragment FooterParts on Footer {

@@ -25,37 +25,12 @@ var config_default = defineConfig({
         format: "json",
         ui: { allowedActions: { create: false, delete: false } },
         fields: [
-          {
-            type: "string",
-            name: "tag",
-            label: "Tag de destaque (ex: Ci\xEAncia \xB7 Astronomia)"
-          },
-          {
-            type: "string",
-            name: "descricao",
-            label: "Descri\xE7\xE3o",
-            ui: { component: "textarea" }
-          },
-          {
-            type: "string",
-            name: "btnPrimarioTexto",
-            label: "Bot\xE3o Principal \u2014 Texto"
-          },
-          {
-            type: "string",
-            name: "btnPrimarioLink",
-            label: "Bot\xE3o Principal \u2014 Link"
-          },
-          {
-            type: "string",
-            name: "btnSecundarioTexto",
-            label: "Bot\xE3o Secund\xE1rio \u2014 Texto"
-          },
-          {
-            type: "string",
-            name: "btnSecundarioLink",
-            label: "Bot\xE3o Secund\xE1rio \u2014 Link"
-          }
+          { type: "string", name: "tag", label: "Tag de destaque (ex: Ci\xEAncia \xB7 Astronomia)" },
+          { type: "string", name: "descricao", label: "Descri\xE7\xE3o", ui: { component: "textarea" } },
+          { type: "string", name: "btnPrimarioTexto", label: "Bot\xE3o Principal \u2014 Texto" },
+          { type: "string", name: "btnPrimarioLink", label: "Bot\xE3o Principal \u2014 Link" },
+          { type: "string", name: "btnSecundarioTexto", label: "Bot\xE3o Secund\xE1rio \u2014 Texto" },
+          { type: "string", name: "btnSecundarioLink", label: "Bot\xE3o Secund\xE1rio \u2014 Link" }
         ]
       },
       // ── SOBRE ─────────────────────────────────
@@ -68,24 +43,9 @@ var config_default = defineConfig({
         ui: { allowedActions: { create: false, delete: false } },
         fields: [
           { type: "string", name: "titulo", label: "T\xEDtulo" },
-          {
-            type: "string",
-            name: "paragrafo1",
-            label: "Par\xE1grafo 1",
-            ui: { component: "textarea" }
-          },
-          {
-            type: "string",
-            name: "paragrafo2",
-            label: "Par\xE1grafo 2",
-            ui: { component: "textarea" }
-          },
-          {
-            type: "string",
-            name: "paragrafo3",
-            label: "Par\xE1grafo 3",
-            ui: { component: "textarea" }
-          },
+          { type: "string", name: "paragrafo1", label: "Par\xE1grafo 1", ui: { component: "textarea" } },
+          { type: "string", name: "paragrafo2", label: "Par\xE1grafo 2", ui: { component: "textarea" } },
+          { type: "string", name: "paragrafo3", label: "Par\xE1grafo 3", ui: { component: "textarea" } },
           { type: "string", name: "stat1Numero", label: "Estat\xEDstica 1 \u2014 N\xFAmero" },
           { type: "string", name: "stat1Label", label: "Estat\xEDstica 1 \u2014 Legenda" },
           { type: "string", name: "stat2Numero", label: "Estat\xEDstica 2 \u2014 N\xFAmero" },
@@ -114,12 +74,7 @@ var config_default = defineConfig({
             fields: [
               { type: "string", name: "icone", label: "\xCDcone (emoji, ex: \u{1F3C6})" },
               { type: "string", name: "titulo", label: "T\xEDtulo" },
-              {
-                type: "string",
-                name: "descricao",
-                label: "Descri\xE7\xE3o",
-                ui: { component: "textarea" }
-              },
+              { type: "string", name: "descricao", label: "Descri\xE7\xE3o", ui: { component: "textarea" } },
               { type: "string", name: "ano", label: "Ano" }
             ]
           }
@@ -145,7 +100,65 @@ var config_default = defineConfig({
               { type: "string", name: "titulo", label: "T\xEDtulo" },
               { type: "string", name: "descricao", label: "Descri\xE7\xE3o" },
               { type: "string", name: "badge", label: "Badge (ex: Premiado)" },
-              { type: "string", name: "link", label: "Link (opcional, ex: https://...)" }
+              { type: "string", name: "link", label: "Link (opcional)" }
+            ]
+          }
+        ]
+      },
+      // ── CURSOS ────────────────────────────────
+      {
+        name: "cursos",
+        label: "Cursos",
+        path: "content",
+        match: { include: "cursos" },
+        format: "json",
+        ui: { allowedActions: { create: false, delete: false } },
+        fields: [
+          { type: "string", name: "titulo", label: "T\xEDtulo da se\xE7\xE3o" },
+          { type: "string", name: "subtitulo", label: "Subt\xEDtulo" },
+          { type: "string", name: "descricao", label: "Descri\xE7\xE3o da se\xE7\xE3o", ui: { component: "textarea" } },
+          {
+            type: "object",
+            name: "lista",
+            label: "Lista de Cursos",
+            list: true,
+            ui: { itemProps: (item) => ({ label: item?.titulo || "Curso" }) },
+            fields: [
+              { type: "string", name: "icone", label: "\xCDcone (emoji)" },
+              { type: "string", name: "titulo", label: "Nome do curso" },
+              { type: "string", name: "instituicao", label: "Institui\xE7\xE3o" },
+              { type: "string", name: "ano", label: "Ano" },
+              { type: "string", name: "descricao", label: "Descri\xE7\xE3o", ui: { component: "textarea" } },
+              { type: "string", name: "link", label: "Link (opcional)" }
+            ]
+          }
+        ]
+      },
+      // ── ENGAJAMENTO ───────────────────────────
+      {
+        name: "engajamento",
+        label: "Engajamento Cient\xEDfico",
+        path: "content",
+        match: { include: "engajamento" },
+        format: "json",
+        ui: { allowedActions: { create: false, delete: false } },
+        fields: [
+          { type: "string", name: "titulo", label: "T\xEDtulo da se\xE7\xE3o" },
+          { type: "string", name: "subtitulo", label: "Subt\xEDtulo" },
+          { type: "string", name: "descricao", label: "Descri\xE7\xE3o da se\xE7\xE3o", ui: { component: "textarea" } },
+          {
+            type: "object",
+            name: "lista",
+            label: "Lista de Engajamentos",
+            list: true,
+            ui: { itemProps: (item) => ({ label: item?.titulo || "Engajamento" }) },
+            fields: [
+              { type: "string", name: "icone", label: "\xCDcone (emoji)" },
+              { type: "string", name: "titulo", label: "Nome do clube / iniciativa" },
+              { type: "string", name: "organizacao", label: "Organiza\xE7\xE3o" },
+              { type: "string", name: "ano", label: "Ano" },
+              { type: "string", name: "descricao", label: "Descri\xE7\xE3o", ui: { component: "textarea" } },
+              { type: "string", name: "link", label: "Link (opcional)" }
             ]
           }
         ]
@@ -167,7 +180,7 @@ var config_default = defineConfig({
             ui: { itemProps: (item) => ({ label: item?.alt || "Imagem" }) },
             fields: [
               { type: "image", name: "src", label: "Imagem" },
-              { type: "string", name: "alt", label: "Descri\xE7\xE3o da imagem (para acessibilidade)" }
+              { type: "string", name: "alt", label: "Descri\xE7\xE3o da imagem" }
             ]
           }
         ]
@@ -206,12 +219,7 @@ var config_default = defineConfig({
         ui: { allowedActions: { create: false, delete: false } },
         fields: [
           { type: "string", name: "titulo", label: "T\xEDtulo do Quiz" },
-          {
-            type: "string",
-            name: "descricao",
-            label: "Descri\xE7\xE3o",
-            ui: { component: "textarea" }
-          },
+          { type: "string", name: "descricao", label: "Descri\xE7\xE3o", ui: { component: "textarea" } },
           {
             type: "object",
             name: "opcoes",
@@ -219,7 +227,7 @@ var config_default = defineConfig({
             list: true,
             ui: { itemProps: (item) => ({ label: item?.texto || "Op\xE7\xE3o" }) },
             fields: [
-              { type: "string", name: "texto", label: "Texto da op\xE7\xE3o (emoji + nome)" }
+              { type: "string", name: "texto", label: "Texto da op\xE7\xE3o" }
             ]
           },
           { type: "string", name: "btnTexto", label: "Texto do bot\xE3o" },
@@ -227,6 +235,8 @@ var config_default = defineConfig({
         ]
       },
       // ── LIVRO ─────────────────────────────────
+      // IMPORTANTE: btn2Texto e btn2Link foram mantidos para não quebrar o schema do Tina Cloud
+      // O componente Livro.jsx usa apenas btn1Texto e btn1Link
       {
         name: "livro",
         label: "Livro",
@@ -236,100 +246,12 @@ var config_default = defineConfig({
         ui: { allowedActions: { create: false, delete: false } },
         fields: [
           { type: "string", name: "titulo", label: "T\xEDtulo" },
-          {
-            type: "string",
-            name: "paragrafo1",
-            label: "Par\xE1grafo 1",
-            ui: { component: "textarea" }
-          },
-          {
-            type: "string",
-            name: "paragrafo2",
-            label: "Par\xE1grafo 2",
-            ui: { component: "textarea" }
-          },
-          { type: "string", name: "btn1Texto", label: "Bot\xE3o 1 \u2014 Texto" },
-          { type: "string", name: "btn1Link", label: "Bot\xE3o 1 \u2014 Link" },
-          { type: "string", name: "btn2Texto", label: "Bot\xE3o 2 \u2014 Texto" },
-          { type: "string", name: "btn2Link", label: "Bot\xE3o 2 \u2014 Link" }
-        ]
-      },
-      // ── CURSOS ────────────────────────────────────
-      {
-        name: "cursos",
-        label: "Cursos",
-        path: "content",
-        match: { include: "cursos" },
-        format: "json",
-        ui: { allowedActions: { create: false, delete: false } },
-        fields: [
-          { type: "string", name: "titulo", label: "T\xEDtulo da se\xE7\xE3o" },
-          { type: "string", name: "subtitulo", label: "Subt\xEDtulo" },
-          {
-            type: "string",
-            name: "descricao",
-            label: "Descri\xE7\xE3o da se\xE7\xE3o",
-            ui: { component: "textarea" }
-          },
-          {
-            type: "object",
-            name: "lista",
-            label: "Lista de Cursos",
-            list: true,
-            ui: { itemProps: (item) => ({ label: item?.titulo || "Curso" }) },
-            fields: [
-              { type: "string", name: "icone", label: "\xCDcone (emoji)" },
-              { type: "string", name: "titulo", label: "Nome do curso" },
-              { type: "string", name: "instituicao", label: "Institui\xE7\xE3o" },
-              { type: "string", name: "ano", label: "Ano" },
-              {
-                type: "string",
-                name: "descricao",
-                label: "Descri\xE7\xE3o",
-                ui: { component: "textarea" }
-              },
-              { type: "string", name: "link", label: "Link (opcional)" }
-            ]
-          }
-        ]
-      },
-      // ── ENGAJAMENTO ───────────────────────────────
-      {
-        name: "engajamento",
-        label: "Engajamento Cient\xEDfico",
-        path: "content",
-        match: { include: "engajamento" },
-        format: "json",
-        ui: { allowedActions: { create: false, delete: false } },
-        fields: [
-          { type: "string", name: "titulo", label: "T\xEDtulo da se\xE7\xE3o" },
-          { type: "string", name: "subtitulo", label: "Subt\xEDtulo" },
-          {
-            type: "string",
-            name: "descricao",
-            label: "Descri\xE7\xE3o da se\xE7\xE3o",
-            ui: { component: "textarea" }
-          },
-          {
-            type: "object",
-            name: "lista",
-            label: "Lista de Engajamentos",
-            list: true,
-            ui: { itemProps: (item) => ({ label: item?.titulo || "Engajamento" }) },
-            fields: [
-              { type: "string", name: "icone", label: "\xCDcone (emoji)" },
-              { type: "string", name: "titulo", label: "Nome do clube / iniciativa" },
-              { type: "string", name: "organizacao", label: "Organiza\xE7\xE3o" },
-              { type: "string", name: "ano", label: "Ano" },
-              {
-                type: "string",
-                name: "descricao",
-                label: "Descri\xE7\xE3o",
-                ui: { component: "textarea" }
-              },
-              { type: "string", name: "link", label: "Link (opcional)" }
-            ]
-          }
+          { type: "string", name: "paragrafo1", label: "Par\xE1grafo 1", ui: { component: "textarea" } },
+          { type: "string", name: "paragrafo2", label: "Par\xE1grafo 2", ui: { component: "textarea" } },
+          { type: "string", name: "btn1Texto", label: "Bot\xE3o \u2014 Texto" },
+          { type: "string", name: "btn1Link", label: "Bot\xE3o \u2014 Link" },
+          { type: "string", name: "btn2Texto", label: "Bot\xE3o 2 \u2014 Texto (n\xE3o utilizado)" },
+          { type: "string", name: "btn2Link", label: "Bot\xE3o 2 \u2014 Link (n\xE3o utilizado)" }
         ]
       },
       // ── FOOTER ────────────────────────────────
@@ -345,7 +267,7 @@ var config_default = defineConfig({
           { type: "string", name: "youtubeLink", label: "Link do YouTube" },
           { type: "string", name: "contatoEmail", label: "E-mail de contato" },
           { type: "string", name: "lattesLink", label: "Link do Lattes" },
-          { type: "string", name: "portfolioLink", label: "Link do Portf\xF3lio (PDF \u2014 ex: /oqvpa/files/portfolio.pdf)" },
+          { type: "string", name: "portfolioLink", label: "Link do Portf\xF3lio (PDF)" },
           { type: "string", name: "copyright", label: "Texto de copyright" }
         ]
       }
