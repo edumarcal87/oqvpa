@@ -150,7 +150,12 @@
       "descricao": "Ouro na Olimpíada de Astrofísica da LIASTRA, explorando os fenômenos mais extremos do universo.",
       "ano": "2025"
     },
-    {},
+    {
+      "icone": "🥇",
+      "titulo": "Ouro Oceano",
+      "descricao": "Primeiro lugar na Olimpíada do Oceano, destacando-se no estudo das ciências ambientais e marinhas.",
+      "ano": "2025"
+    },
     {},
     {},
     {},
