@@ -69,6 +69,13 @@
       "descricao": "Descoberta da supernova SN2025ifq através do Projeto Kilonova Seekers",
       "badge": "Reconhecimento",
       "link": "https://goto- obs.github.io/knseekers-results/discovery/2025/05/08/GOTO24jvr.html"
+    },
+    {
+      "numero": "11",
+      "titulo": "Cientista cidadão",
+      "descricao": "Cientista cidadão colaborador voluntário da plataforma Zooniverse",
+      "badge": "Reconhecimento",
+      "link": "https://www.zooniverse.org/"
     }
   ]
 }
