@@ -186,7 +186,12 @@
       "descricao": "Medalha de prata na Olimpíada de Astronomia do Clube de Astronomia Atena, aprofundando o conhecimento do cosmos.",
       "ano": "2024"
     },
-    {},
+    {
+      "icone": "🥈",
+      "titulo": " Prata TNC",
+      "descricao": "Prata no Torneio Nacional de Ciências da EOBA, destacando-se entre jovens cientistas de todo o Brasil.",
+      "ano": "2024"
+    },
     {},
     {},
     {},
