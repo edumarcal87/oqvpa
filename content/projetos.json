@@ -34,6 +34,13 @@
       "descricao": "NASA Space Apps Challenge 2023 ",
       "badge": "Projeto Premiado",
       "link": "https://www.spaceappschallenge.org/2023/find-a-team/eclipsedatics/"
+    },
+    {
+      "numero": "02",
+      "titulo": "NASA Space Apps Challenge 2025 ",
+      "descricao": "O NASA International Space Apps Challenge é um evento global que reúne pessoas de todo o mundo para usar dados abertos da NASA e de outras agências espaciais para resolver problemas reais usando a tecnologia.",
+      "badge": "Projeto Premiado",
+      "link": "https://www.spaceappschallenge.org/2025/find-a-team/meteors-exploders/?tab=details"
     }
   ]
 }
