@@ -204,7 +204,12 @@
       "descricao": "Medalha de prata na Olimpíada de Matemática do MEDALHEI, demonstrando raciocínio lógico e habilidade analítica.",
       "ano": "2024"
     },
-    {},
+    {
+      "icone": "🥈",
+      "titulo": " Prata SPECIES",
+      "descricao": "Destaque na Olimpíada de Biologia do MEDALHEI, explorando os mistérios da vida e dos ecossistemas.",
+      "ano": "2024"
+    },
     {},
     {},
     {},
