@@ -48,7 +48,12 @@
       "descricao": "Reconhecimento internacional na Olimpíada de Matemática da SMETA OLYMPIAD, competindo com jovens do mundo todo.",
       "ano": "2025"
     },
-    {},
+    {
+      "icone": "🏅",
+      "titulo": "Menção ONC",
+      "descricao": "Menção Honrosa na Olimpíada Nacional de Ciências, destacando-se entre os melhores jovens cientistas do país.",
+      "ano": "2025"
+    },
     {},
     {},
     {},
