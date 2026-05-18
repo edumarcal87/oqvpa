@@ -95,6 +95,12 @@
       "titulo": "Bronze EUREKA",
       "descricao": "Bronze na Olimpíada de Tecnologia do MEDALHEI, aplicando criatividade na solução de desafios tecnológicos.",
       "ano": "2025"
+    },
+    {
+      "icone": "🥉 ",
+      "titulo": " Bronze OBRL",
+      "descricao": "Medalha de bronze na Olimpíada Brasileira de Raciocínio Lógico, destacando o pensamento analítico e estratégico.",
+      "ano": "2025"
     }
   ]
 }
